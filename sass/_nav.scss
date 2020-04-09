@@ -1,0 +1,185 @@
+header {
+ background-color: $nav-background;
+ height: $nav-height;
+ color: $nav-font-color;
+ position: relative;
+
+ @media screen and (min-width: $breakpoint) {
+  display: grid;
+  grid-template-columns: 1fr min-content minmax(600px, 1fr) 1fr;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $box-shadow;
+ }
+ 
+ // Nav Logo
+ .logo {
+  line-height: $nav-height;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: $breakpoint) {
+   grid-column: 2 / 3;
+   display: block;
+   @include padding(0 null null 1rem);
+  }
+
+  a {
+   text-decoration: none;
+   color: $nav-font-color;
+   text-transform: uppercase;
+
+   &:hover {
+    color: $link-hover-color;
+   }
+
+   span {
+    text-transform: lowercase;
+    font-size: .8em;
+   }
+  }
+ }
+
+ // Nav Toggle
+ .nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+ }
+
+ // .nav-toggle:focus~.nav-toggle-label {
+ //  outline: 3px solid rgba(lightblue, .75);
+ // }
+
+ // Nav Toggle Label & hamburger icon w/animation
+ .nav-toggle:checked~.nav-toggle-label span {
+  background: transparent;
+ }
+
+ .nav-toggle:checked~.nav-toggle-label span:before {
+  transform: rotate(45deg);
+  top: 27px;
+ }
+
+ .nav-toggle:checked~.nav-toggle-label span:after {
+  transform: rotate(-45deg);
+  bottom: 29px;
+ }
+
+ .nav-toggle-label {
+  cursor: pointer;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  right: 1rem;
+  @media screen and (min-width: $breakpoint) {
+   display: none;
+  }
+
+  span,
+  span::before,
+  span::after {
+   width: 2rem;
+   height: 4px;
+   border-radius: 7px;
+   background: $nav-font-color;
+  }
+
+  span::before,
+  span::after {
+   content: '';
+   position: absolute;
+   transform: rotate(0deg);
+   transition: transform 125ms ease;
+  }
+
+  span::before {
+   top: 18px;
+  }
+
+  span::after {
+   bottom: 18px;
+  }
+ }
+
+ // Navbar
+ .navbar {
+  position: absolute;
+  top: 100%;
+  background: $nav-background;
+  width: 100%;
+  box-shadow: $box-shadow;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 125ms ease-in-out;
+
+  @media screen and (min-width: $breakpoint) {
+   position: relative;
+   text-align: left;
+   transition: none;
+   transform: scale(1, 1);
+   background: none;
+   top: initial;
+   left: initial;
+
+   grid-column: 3 / 4;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   box-shadow: none;
+  }
+
+  ul {
+   @media screen and (min-width: $breakpoint) {
+    display: flex;
+   }
+   .active {
+    @media screen and (min-width: $breakpoint) {
+    
+     color: $link-hover-color;
+     background: $black;
+    }
+   }
+  }
+
+  .nav-link {
+   height: $nav-height;
+  }
+
+  a {
+   width: 100%;
+   height: $nav-height;
+   cursor: pointer;
+   text-transform: uppercase;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   text-decoration: none;
+   color: $nav-font-color;
+   opacity: 0;
+   transition: opacity 125ms ease-in-out 125ms;
+
+   @media screen and (min-width: $breakpoint) {
+    opacity: 1;
+    @include margin(null 5rem null null);
+   }
+
+   &:hover {
+    color: $link-hover-color;
+    background: $black;
+   }
+  }
+ }
+
+ .nav-toggle:checked~.navbar {
+  transform: scale(1, 1);
+ }
+
+ .nav-toggle:checked~.navbar a {
+  opacity: 1;
+ }
+
+}
