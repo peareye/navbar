@@ -1,16 +1,16 @@
 // color theme
 
-$black: #4a544a;
-$dark-green: #849d6a;
-$white: #fcfaf1;
-$dark-orange: #ff974c;
-$light-orange: #ffd96a;
+$black: hsl(0, 0%, 0%);
+$dark-green: hsl(89, 52%, 24%);
+$white: hsl(0, 0%, 100%);
+$dark-orange: hsl(25, 84%, 51%);
+$light-orange: hsl(36, 100%, 71%);
 
 // Navigation Variables
 $breakpoint: 768px;
 $nav-height: 70px;
-$nav-background: $dark-green;
-$nav-font-color: $dark-orange;
+$nav-background: $black;
+$nav-font-color: $light-orange;
 $link-hover-color: $dark-orange;
 
 $box-shadow: 0 2px 2px rgba($black, .5);
