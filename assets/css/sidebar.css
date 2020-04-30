@@ -1,3 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: white;
+  background: white;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout */
+.wrapper {
+  height: calc(100% - $nav-height);
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.content {
+  padding: 1em;
+}
+
+/* Header, Logo, Hamburger Toggle */
+header {
+  padding-right: 1em;
+  padding-left: 1em;
+  background-color: #323943;
+  height: 55px;
+  color: #ffc46b;
+  position: relative;
+}
+header .logo {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 55px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  header .logo {
+    justify-content: flex-start;
+  }
+}
+header .logo a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header .logo a:hover {
+  color: #eb7119;
+}
+header .logo a span {
+  text-transform: lowercase;
+}
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle-label {
+  cursor: pointer;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .nav-toggle-label {
+    display: none;
+  }
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  width: 2rem;
+  height: 4px;
+  border-radius: 7px;
+  background: #ffc46b;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+  transform: rotate(0deg);
+  transition: transform 125ms ease;
+}
+.nav-toggle-label span::before {
+  top: 35px;
+}
+.nav-toggle-label span::after {
+  bottom: 35px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+  background: transparent;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:before {
+  transform: rotate(45deg);
+  top: 26px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:after {
+  transform: rotate(-45deg);
+  bottom: 25px;
+}
+
+/* Utility Classes */
+.nav-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(50, 57, 67, 0.25);
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.span {
+  grid-column: 1/-1;
+}
 
 /*# sourceMappingURL=sidebar.css.map */
