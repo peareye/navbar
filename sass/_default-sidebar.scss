@@ -4,6 +4,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+}
+a{
+  color: $grey;
+  &:hover {
+    color: rgba($grey, .5);
+  }
 }
 
 html,
@@ -22,17 +29,21 @@ body {
 
 /* Layout */
 .wrapper {
-  height: calc(100% - $nav-height);
+  height: calc(100% - #{$nav-height});
   display: flex;
   flex-flow: row nowrap;
+  position: relative;
 }
 
 .content {
   @include padding(1em);
+  flex-basis: 0;
+  flex-grow: 999;
 }
 
+
 /* Header, Logo, Hamburger Toggle */
-header {
+.top-header {
   @include padding(null 1em);
   background-color: $grey;
   height: $nav-height;
@@ -42,13 +53,13 @@ header {
   @media screen and (min-width: $breakpoint) {
     // Media Query Here
   }
-
+  
   .logo {
     font-size: 2rem;
     font-weight: 900;
     line-height: $nav-height;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     @media screen and (min-width: $breakpoint) {
       justify-content: flex-start;
     }
@@ -68,64 +79,9 @@ header {
     }
   }
 }
-// Nav Toggle (using checkbox :checked)
-.nav-toggle {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
 
- // Nav Toggle Label & hamburger icon w/animation
- .nav-toggle-label {
-   cursor: pointer;
-   height: $nav-height;
-   display: flex;
-   align-items: center;
-   position: absolute;
-   top: 0px;
-   left: 1rem;
-   @media screen and (min-width: $breakpoint) {
-    display: none;
-  }
-  span,
-  span::before,
-  span::after {
-    width: 2rem;
-    height: 4px;
-    border-radius: $border-radius;
-    background: $nav-font-color;
-  }
 
-  span::before,
-  span::after {
-    content: '';
-    position: absolute;
-    transform: rotate(0deg);
-    transition: transform 125ms ease;
-  }
-
-  span::before {
-    top: 35px;
-  }
-
-  span::after {
-    bottom: 35px;
-  }
  
- }
- .nav-toggle:checked~.nav-toggle-label span {
-  background: transparent;
-}
-
-.nav-toggle:checked~.nav-toggle-label span:before {
-  transform: rotate(45deg);
-  top: 26px;
-}
-
-.nav-toggle:checked~.nav-toggle-label span:after {
-  transform: rotate(-45deg);
-  bottom: 25px;
-}
 /* Utility Classes */
 .nav-divider {
   width: 100%;
@@ -137,3 +93,14 @@ header {
 .span {
   grid-column: 1 / -1;
 }
+.badge{
+  width: 20px;
+  height: 20px;
+   @include margin(null 13px null null);
+   border-radius: 50%;
+   background: green;
+   color: $white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }

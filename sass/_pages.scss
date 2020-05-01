@@ -1,0 +1,6 @@
+.content-header {
+  background: $off-white;
+  height: $nav-height;
+  width: 100%;
+  @include padding(.5em);
+}
