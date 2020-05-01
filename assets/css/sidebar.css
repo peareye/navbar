@@ -159,7 +159,7 @@ body {
 }
 .sidebar .settings {
   margin-top: auto;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .sidebar .fas {
   color: rgba(50, 57, 67, 0.35);
@@ -240,11 +240,54 @@ body {
   bottom: 25px;
 }
 
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
 .content-header {
   background: #f3f5f7;
   height: 55px;
   width: 100%;
   padding: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  padding: 1em;
+}
+.content .content-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+}
+.content .content-card {
+  padding: 0.25em;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+}
+.content .content-card:hover {
+  background: #f3f5f7;
+}
+.content .content-card h3 {
+  color: #eb7119;
+}
+.content .content-card p {
+  grid-column: 2/-1;
+  font-size: 0.75rem;
+  color: rgba(50, 57, 67, 0.75);
+}
+.content .content-card .fas {
+  font-size: 1.3rem;
+  color: rgba(50, 57, 67, 0.5);
+}
+
+ul {
+  list-style: none;
 }
 
 /*# sourceMappingURL=sidebar.css.map */

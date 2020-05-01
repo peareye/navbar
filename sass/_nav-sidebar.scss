@@ -57,19 +57,18 @@
 
         &:hover {
           background: $blue-light;
-          color: $grey;
+          color: $clr-text;
         }
       }
     }
   }
 
   .settings {
-    @include margin(auto null null null);
-    @include padding(null null 1rem null);
+    @include margin(auto null 1rem null);
   }
 
   .fas {
-    color: rgba($grey, .35);
+    color: rgba($clr-text, .35);
     @include margin(null 1rem null .25em);
     font-size: 1rem;
   }

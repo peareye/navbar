@@ -1,6 +1,49 @@
+main{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
 .content-header {
   background: $off-white;
   height: $nav-height;
   width: 100%;
   @include padding(.5em);
+  display: flex;
+  align-items: center;
+}
+.content {
+  @include padding(1em);
+  .content-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+  }
+  .content-card{
+    @include padding(.25em);
+    border-radius: $border-radius;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    &:hover{
+      background: $off-white;
+    }
+    h3{
+      color: $dark-orange;
+    }
+    
+    p{
+      grid-column: 2 / -1;
+      font-size: .75rem;
+      color: rgba($clr-text, .75); 
+    }
+    .fas {
+      font-size: 1.3rem;
+      color: rgba($clr-text, .5);
+    }
+  }
+
+}
+ul {
+  list-style: none;
 }

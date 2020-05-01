@@ -1,6 +1,7 @@
 // color theme
 
 $black: hsl(0, 0%, 0%);
+$dark-grey: hsl(0, 0%, 25%);
 $dark-green: hsl(89, 52%, 24%);
 $white: hsl(0, 0%, 100%);
 $dark-orange: hsl(25, 84%, 51%);
@@ -18,4 +19,16 @@ $border-radius: 7px;
 
 $nav-gtc: 1rem auto minmax(600px, 1fr) 1rem;
 $sidebar-width: 300px;
- 
+
+// Text Colors
+
+$clr-h: $dark-orange;
+$clr-text: $dark-grey;
+
+
+
+// Default color Styles
+
+h1, h2, h3, h4, h5, h6{
+  color: $clr-h !important;
+} 
