@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideNav Layout</title>
+    <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
+  
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+</head>
+
+<body>
+    <header class="top-header">
+        <div class="logo">
+            <a href="/index.html">Piton<span>CMS</span></a></div>
+
+        <div class="sidebar">
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+        <aside class="sidebar">
+
+            <ul class="side-nav">
+                <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
+                <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a
+                        href="/content/content.html"> Pages</a>
+                    <!-- <ul class="sub-nav span">
+      <li class="sub-nav__link"><a href="#">Content Pages</a></li>
+      <li class="sub-nav__link"><a href="#">Without Hero</a></li>
+      <li class="sub-nav__link"><a href="#">With Hero</a></li>
+      <div class="nav-divider"></div>
+      <li class="sub-nav__link"><a href="#">Collection Pages</a></li>
+      <li class="sub-nav__link"><a href="#">Test Page</a></li>
+      <li class="sub-nav__link"><a href="#">Collection Group</a></li>
+      <div class="nav-divider"></div>
+      <li class="sub-nav__link"><a href="#">Navigation</a></li>
+     </ul> -->
+                </li>
+                <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
+                <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html">
+                        Messages</a>
+                    <div class="badge badge-notify">4</div>
+                </li>
+                <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
+                <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html">
+                        Settings</a></li>
+            </ul>
+        </aside>
+
+        <main role="main">
+            <header class="content-header">
+                <div class="breadcrumb">Settings</div>
+                <h3>All Pages</h3>
+                <div class="btn-group">
+                    <a href="#" class="btn">Add Page</a>
+                </div>
+            </header>
+            <div class="content">
+            
+                    <div class="page-list-item-filter">
+                     <form>
+                         <div class="form-inner">
+                             <input class="page-search-input"  type="text" name="searchPage" id="searchPage" placeholder="Search Pages">
+                             <div class="dropdown">
+                                <button class="btn btn-dropdown">Filter by Status&nbsp;&nbsp;<i class="fas fa-chevron-down"></i></button>
+                                <div class="dropdown-content">
+                              
+                                  <input type="radio" id="published" name="gender" value="published">
+                                  <label for="published">Published</label>
+                                  <input type="radio" id="Pending" name="gender" value="Pending">
+                                  <label for="Pending">Pending</label>
+                                  <input type="radio" id="draft" name="gender" value="draft">
+                                  <label for="draft">Draft</label>
+                                </div>
+                              </div>
+                             <div class="dropdown">
+                                <button class="btn btn-dropdown">Filter by Template&nbsp;&nbsp;<i class="fas fa-chevron-down"></i></button>
+                                <div class="dropdown-content">
+                                    <p class="dropdown-title span">Pages</p>
+                                    <input type="radio" id="withHero" name="gender" value="withHero">
+                                    <label for="withHero">With Hero</label>
+                                    <input type="radio" id="withoutHero" name="gender" value="withoutHero">
+                                    <label for="withoutHero">Without Hero</label>
+                                    <hr class="dropdown-divider span">
+                                    <p class="dropdown-title span">Collections</p>
+                                    <input type="radio" id="holidayRecipe" name="gender" value="holidayRecipe">
+                                    <label for="holidayRecipe">Holiday Recipes</label>
+                                    <input type="radio" id="ketoRecipe" name="gender" value="ketoRecipe">
+                                    <label for="ketoRecipe">Keto Recipes</label>
+                                    <input type="radio" id="services" name="gender" value="services">
+                                    <label for="services">Blog Post</label>
+                                 
+
+
+
+
+                                
+                                </div>
+                              </div>
+                    
+                         </div>
+
+                        <div class="page-list-item-search">
+
+                        </div>
+                        <div class="page-list-item__heading"></div>
+                        <div class="page-list-item__heading"></div>
+                     </form>
+                       
+                    </div>
+                    <div class="page-list-item-header">
+                        <div class="page-list-item__heading"></div>
+                        <div class="page-list-item__heading">Title</div>
+                        <div class="page-list-item__heading">Status</div>
+                        <div class="page-list-item__heading">Template</div>
+                    </div>
+
+                    <!-- Page List Item -->
+                    <a class="page-list-item" href="#">
+                        <div class="page-list-item__media"><img src="https://unsplash.it/100/101" alt=""></div>
+                        <div class="page-list-item__title" title="Hero">Hero</div>
+                        <div class="page-list-item__status draft">Draft</div>
+                        <div class="page-list-item__template">Template: heroPage</div>
+
+                    </a>
+                    <a class="page-list-item" href="#">
+                        <div class="page-list-item__media"><img src="https://unsplash.it/100/100" alt=""></div>
+                        <div class="page-list-item__title" title="Hero">Contact Us</div>
+                        <div class="page-list-item__status published">Published</div>
+                        <div class="page-list-item__template">Template: heroPage</div>
+                    </a>
+                    <a class="page-list-item" href="#">
+                        <div class="page-list-item__media"><img src="https://unsplash.it/100/103" alt=""></div>
+                        <div class="page-list-item__title" title="Hero">Services</div>
+                        <div class="page-list-item__status published">published</div>
+                        <div class="page-list-item__template">Template: heroPage</div>
+                    </a>
+                    <a class="page-list-item" href="#">
+                        <div class="page-list-item__media"><img src="https://unsplash.it/100/104" alt=""></div>
+                        <div class="page-list-item__title" title="Hero">Kaiser Schmarren</div>
+                        <div class="page-list-item__status pending">pending</div>
+                        <div class="page-list-item__template">Template: baking</div>
+                    </a>
+                    <a class="page-list-item" href="#">
+                        <div class="page-list-item__media"></div>
+                        <div class="page-list-item__title" title="Hero">Services</div>
+                        <div class="page-list-item__status published">published</div>
+                        <div class="page-list-item__template">Template: heroPage</div>
+                    </a>
+                    <a class="page-list-item" href="#">
+                        <div class="page-list-item__media"><img src="https://unsplash.it/101/104" alt=""></div>
+                        <div class="page-list-item__title" title="Hero">Services</div>
+                        <div class="page-list-item__status published">published</div>
+                        <div class="page-list-item__template">Template: heroPage</div>
+                    </a>
+                    <a class="page-list-item" href="#">
+                        <div class="page-list-item__media"><img src="https://unsplash.it/100/104" alt=""></div>
+                        <div class="page-list-item__title" title="Hero">Kaiser Schmarren</div>
+                        <div class="page-list-item__status published">published</div>
+                        <div class="page-list-item__template">Template: baking</div>
+                    </a>
+                    <a class="page-list-item" href="#">
+                        <div class="page-list-item__media"></div>
+                        <div class="page-list-item__title" title="Hero">Services</div>
+                        <div class="page-list-item__status published">published</div>
+                        <div class="page-list-item__template">Template: heroPage</div>
+                    </a>
+                    <a class="page-list-item" href="#">
+                        <div class="page-list-item__media"><img src="https://unsplash.it/101/104" alt=""></div>
+                        <div class="page-list-item__title" title="Hero">Services</div>
+                        <div class="page-list-item__status published">published</div>
+                        <div class="page-list-item__template">Template: heroPage</div>
+                    </a>
+
+                
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

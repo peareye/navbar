@@ -2,80 +2,71 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>SideNav Layout</title>
- <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
- <link rel="stylesheet" href="/assets/css/sidebar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SideNav Layout</title>
+  <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/css/sidebar.css">
 </head>
 
 <body>
- <header class="top-header">
-  <div class="logo">
-   <a href="/index.html">Piton<span>CMS</span></a></div>
- </header>
+  <header class="top-header">
+    <div class="logo">
+      <a href="/index.html">Piton<span>CMS</span></a></div>
+  </header>
 
- <div class="wrapper">
-  <!-- Nav Toggle -->
-  <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
-  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+  <div class="wrapper">
+    <!-- Nav Toggle -->
+    <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-   <ul class="side-nav">
-    <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
-    <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content.html"> Content</a>
-     <ul class="sub-nav span">
-      <li class="sub-nav__link"><a href="#">Content Pages</a></li>
-      <li class="sub-nav__link"><a href="#">Without Hero</a></li>
-      <li class="sub-nav__link"><a href="#">With Hero</a></li>
-      <div class="nav-divider"></div>
-      <li class="sub-nav__link"><a href="#">Collection Pages</a></li>
-      <li class="sub-nav__link"><a href="#">Test Page</a></li>
-      <li class="sub-nav__link"><a href="#">Collection Group</a></li>
-      <div class="nav-divider"></div>
-      <li class="sub-nav__link"><a href="#">Navigation</a></li>
-     </ul>
-    </li>
-    <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
-    <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a>
-     <div class="badge badge-notify">4</div>
-    </li>
-    <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
-    <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a>
-    </li>
-   </ul>
-  </aside>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul class="side-nav">
+        <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
+        <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content/content.html">
+            Pages</a></li>
+        <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
+        <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a>
+          <div class="badge badge-notify">4</div>
+        </li>
+        <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
+        <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a>
+        </li>
+      </ul>
+    </aside>
 
-  <main role="main">
+    <main role="main">
+      <form class="jsUserForm" action="/admin/tools/settings/sitemap/update" method="post" accept-charset="utf-8">
+        <input type="hidden" name="pitonCsrfToken"
+          value="2Wo4vV1+e1R2bijc/NI36iIAlVRTjq6pLGFrhH+3q378cuc14yGxR3USibxGIczVbbCon5T4iPnScMmyF1ppHg==">
 
-    <header class="content-header">
-     <!-- Breadcrumbs -->
-     <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
-     </div>
+        <header class="content-header">
+          <!-- Breadcrumbs -->
+          <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
+          </div>
 
-     <!-- Control Buttons -->
-     <div class="btn-group">
-      <button type="button" class="btn jsAddUserRow">Add User</button>
-      <button type="submit" name="button" class="btn">Save User(s)</button>
-      <a class="btn" href="/admin/tools/user/">Cancel</a>
-     </div>
+          <!-- Page Title -->
+          <h3 class="section-title"> Site Map</h3>
 
-     <!-- Page Title -->
-     <h3 class="section-title"> Site Map</h3>
+          <!-- Control Buttons -->
+          <div class="btn-group">
+            <button class="btn btn-outline-primary" type="submit">Update Sitemap</button>
+          </div>
 
-    </header>
+        </header>
 
-    <div class="content">
-     <!-- Content Here -->
-     <div class="content-block">
-      <div class="sitemap-wrapper span">
-       <p>Search engines might use your sitemap to better understand what content to index. Click update after posting
-        new content.</p>
-       <div>
+        <div class="content">
+          <!-- Content Here -->
+          <div class="content-block">
+            <div class="sitemap-wrapper span">
+              <p>Search engines might use your sitemap to better understand what content to index. Click update after
+                posting
+                new content.</p>
+              <div>
 
-        <a href="/sitemap.xml" target="_blank">Link to sitemap</a> | Last updated 05/02/2020
-        <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                <a href="/sitemap.xml" target="_blank">Link to sitemap</a> | Last updated 05/02/2020
+                <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;&gt;
 	&lt;url&gt;
 		&lt;loc&gt;/html-styles&lt;/loc&gt;
@@ -107,14 +98,14 @@
  	&lt;/url&gt;
 &lt;/urlset&gt;
 </pre>
-       </div>
-      </div>
-     </div>
+              </div>
+            </div>
+          </div>
 
-    </div>
-  
-  </main>
- </div>
+        </div>
+      </form>
+    </main>
+  </div>
 
 </body>
 

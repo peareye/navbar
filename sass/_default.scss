@@ -99,13 +99,26 @@ h1, h2, h3, h4, h5, h6 {
   grid-column: 1 / -1;
 }
 .badge{
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 50%;
    @include margin(null 13px null null);
-   border-radius: 50%;
-   background: green;
+   border-radius: $border-radius;
+   background: $dark-green;
    color: $white;
    display: flex;
    justify-content: center;
    align-items: center;
+ }
+ .published {
+   color: green;
+   text-transform: capitalize;
+
+ }
+ .draft {
+   color: grey;
+   text-transform: capitalize;
+ }
+ .pending {
+   color: gold;
+    text-transform: capitalize;
  }

@@ -82,7 +82,7 @@ fieldset {
 }
 
 legend {
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: var(--spacing--small);
   padding: 0;
 }
@@ -449,15 +449,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .badge {
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 50%;
   margin-right: 13px;
-  border-radius: 50%;
-  background: green;
+  border-radius: 7px;
+  background: #3e5d1d;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.published {
+  color: green;
+  text-transform: capitalize;
+}
+
+.draft {
+  color: grey;
+  text-transform: capitalize;
+}
+
+.pending {
+  color: gold;
+  text-transform: capitalize;
 }
 
 .sidebar {
@@ -616,6 +631,12 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+.content-header .section-title {
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  font-size: 1.6rem;
+}
 
 .content {
   padding: 1em;
@@ -654,27 +675,36 @@ main {
   margin: 0;
 }
 
-ul {
-  list-style: none;
-}
-
 .content-block {
+  margin: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
 }
 .content-block .form-group {
   padding: 1rem;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+}
+.content-block .form-group__title-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+.content-block .form-group__title-wrapper label {
+  flex: 1;
+}
+.content-block .form-group__title-wrapper .badge {
+  flex: 0;
+  padding: 0.125em 0.25em;
 }
 
 .breadcrumb {
   font-weight: 300;
   font-size: 0.75rem;
-  align-self: flex-start;
 }
 .breadcrumb a {
   color: #eb7119;
@@ -690,6 +720,119 @@ ul {
   align-items: center;
   padding-right: 1em;
   padding-left: 1em;
+}
+.btn-group * + * {
+  margin-left: 1em;
+}
+
+/* Page Content Styles */
+.page-list-item,
+.page-list-item-header {
+  display: grid;
+  grid-template-columns: 80px 200px 150px 1fr;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-top: solid 1px rgba(92, 106, 196, 0.12);
+}
+.page-list-item:hover,
+.page-list-item-header:hover {
+  background: rgba(92, 106, 196, 0.12);
+}
+.page-list-item__heading,
+.page-list-item-header__heading {
+  font-size: 1.1rem;
+}
+.page-list-item:last-child,
+.page-list-item-header:last-child {
+  border-bottom: solid 1px rgba(92, 106, 196, 0.12);
+}
+.page-list-item__media,
+.page-list-item-header__media {
+  object-fit: cover;
+  padding: 0.5em;
+}
+.page-list-item__title,
+.page-list-item-header__title {
+  font-weight: 700;
+}
+
+.page-list-item-header {
+  height: 40px;
+}
+
+.add-user {
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+.form-inner {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 300px repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+  justify-self: center;
+  align-items: center;
+}
+.form-inner .page-search-input {
+  margin: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f3f5f7;
+  min-width: 160px;
+  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+  z-index: 1;
+}
+
+.dropdown-content a, .dropdown-title {
+  color: black;
+  padding: 0.5em;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-title {
+  font-weight: 700;
+  padding: 0.5em 0.5em 0;
+  margin: 0;
+}
+
+.dropdown-divider {
+  margin: 0;
+  padding: 0;
+  color: rgba(83, 35, 35, 0.25);
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-self: center;
+  padding: 0.5em;
+}
+
+.btn-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  margin: 0;
+  padding: 0;
 }
 
 /* Form Styles Defaults */
