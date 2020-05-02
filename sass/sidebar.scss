@@ -1,7 +1,8 @@
-@import 'bourbon/bourbon';
-@import 'theme-sidebar';
-@import 'default-sidebar';
-@import 'nav-sidebar';
+@import 'theme';
+@import 'vendor/vendor';
+@import 'default';
+@import 'nav';
 @import 'hamburger'; 
 @import 'pages';
-@import 'forms';
+@import 'forms'; 
+@import 'buttons';

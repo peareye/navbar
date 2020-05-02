@@ -1,49 +1,105 @@
-main{
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
+main {
+ display: flex;
+ flex-flow: column nowrap;
+ width: 100%;
 }
 
 .content-header {
-  background: $off-white;
-  height: $nav-height;
-  width: 100%;
-  @include padding(.5em);
-  display: flex;
-  align-items: center;
+ background: $off-white;
+ height: $nav-height;
+ width: 100%;
+ @include padding(.5em);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
+
 .content {
-  @include padding(1em);
-  .content-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1em;
-  }
-  .content-card{
-    @include padding(.25em);
-    border-radius: $border-radius;
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    align-items: center;
-    &:hover{
-      background: $off-white;
-    }
-    h3{
-      color: $dark-orange;
-    }
-    
-    p{
-      grid-column: 2 / -1;
-      font-size: .75rem;
-      color: rgba($clr-text, .75); 
-    }
-    .fas {
-      font-size: 1.3rem;
-      color: rgba($clr-text, .5);
-    }
+ @include padding(1em);
+
+ .content-cards {
+  @include margin(2rem null);
+  width: 80%;
+
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 2em;
+ }
+
+ .content-card {
+  @include padding(.5em);
+  border-radius: $border-radius;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .25em .5em;
+  align-items: center;
+
+  &:hover {
+   background: $off-white;
   }
 
+  p {
+   grid-column: 2 / -1;
+   font-size: .75rem;
+   color: rgba($clr-text, .75);
+  }
+
+  .card-icon {
+   // background: pink;
+   font-size: 1.3rem;
+   color: rgba($clr-text, .5);
+
+  }
+
+  padding-right: 1rem;
+
+  .title-text {
+   margin: 0;
+  }
+ }
+
 }
+
 ul {
-  list-style: none;
+ list-style: none;
+}
+
+.content-block {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+ gap: 1rem;
+
+ .form-group {
+  @include padding(1rem);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  box-shadow: $shadow-test;
+
+ }
+}
+
+.breadcrumb {
+
+ font-weight: 300;
+ font-size: .75rem;
+ align-self: flex-start;
+
+ a {
+  color: $clr-accent;
+
+  &:hover {
+   color: $dark-grey;
+  }
+ }
+}
+
+.btn-group {
+
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ @include padding(null 1em);
 }

@@ -2,63 +2,118 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SideNav Layout</title>
-  <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/assets/css/sidebar.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>SideNav Layout</title>
+ <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/assets/css/sidebar.css">
 </head>
 
 <body>
-  <header class="top-header">
-    <div class="logo">
-      <a href="/index.html">Piton<span>CMS</span></a></div>
+ <header class="top-header">
+  <div class="logo">
+   <a href="/index.html">Piton<span>CMS</span></a></div>
+ </header>
 
-    <div class="sidebar">
-    </div>
-  </header>
+ <div class="wrapper">
+  <!-- Nav Toggle -->
+  <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
 
-  <div class="wrapper">
-    <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-    <aside class="sidebar">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+   <ul class="side-nav">
+    <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
+    <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content.html"> Content</a>
+     <ul class="sub-nav span">
+      <li class="sub-nav__link"><a href="#">Content Pages</a></li>
+      <li class="sub-nav__link"><a href="#">Without Hero</a></li>
+      <li class="sub-nav__link"><a href="#">With Hero</a></li>
+      <div class="nav-divider"></div>
+      <li class="sub-nav__link"><a href="#">Collection Pages</a></li>
+      <li class="sub-nav__link"><a href="#">Test Page</a></li>
+      <li class="sub-nav__link"><a href="#">Collection Group</a></li>
+      <div class="nav-divider"></div>
+      <li class="sub-nav__link"><a href="#">Navigation</a></li>
+     </ul>
+    </li>
+    <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
+    <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a>
+     <div class="badge badge-notify">4</div>
+    </li>
+    <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
+    <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a>
+    </li>
+   </ul>
+  </aside>
 
-      <ul class="side-nav">
-        <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
-        <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content.html"> Content</a>
-          <ul class="sub-nav span">
-            <li class="sub-nav__link"><a href="#">Content Pages</a></li>
-            <li class="sub-nav__link"><a href="#">Without Hero</a></li>
-            <li class="sub-nav__link"><a href="#">With Hero</a></li>
-            <div class="nav-divider"></div>
-            <li class="sub-nav__link"><a href="#">Collection Pages</a></li>
-            <li class="sub-nav__link"><a href="#">Test Page</a></li>
-            <li class="sub-nav__link"><a href="#">Collection Group</a></li>
-            <div class="nav-divider"></div>
-            <li class="sub-nav__link"><a href="#">Navigation</a></li>
-          </ul>
-        </li>
-        <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
-        <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a>
-          <div class="badge badge-notify">4</div>
-        </li>
-        <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
-        <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a>
-        </li>
-      </ul>
+  <main role="main">
+   <form action="/admin/tools/settings/save" method="post" accept-charset="utf-8">
+    <input type="hidden" name="pitonCsrfToken"
+     value="2Wo4vV1+e1R2bijc/NI36iIAlVRTjq6pLGFrhH+3q378cuc14yGxR3USibxGIczVbbCon5T4iPnScMmyF1ppHg==">
+    <input type="hidden" name="category" value="social">
 
-    </aside>
+    <header class="content-header">
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
+     </div>
 
-    <main>
-      <header class="content-header">
-        <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
-        </div>
-      </header>
-      <div class="content">
-        <h1>Social</h1>
+     <!-- Control Buttons -->
+     <div class="btn-group">
+      <a class="btn" href="/admin/tools/settings/social">Cancel</a>
+      <button class="btn" type="submit" name="button" value="save">Save</button>
+     </div>
+
+     <!-- Page Title -->
+     <h3 class="section-title"> Social Settings</h3>
+
+    </header>
+
+    <div class="content">
+     <!-- Content Here -->
+     <div class="content-block">
+
+      <div class="form-group jsSettingParent" id="page-setting-facebookLink">
+       <label>Facebook Link</label> <span class="badge badge-success">New</span>
+
+       <input type="hidden" name="setting[tks0][id]" value="">
+       <input type="hidden" name="setting[tks0][category]" value="social">
+       <input type="hidden" name="setting[tks0][setting_key]" value="facebookLink">
+       <input type="text" class="form-control" name="setting[tks0][setting_value]" value="https://www.facebook.com"
+        autocomplete="off">
+       <small class="form-text text-muted">Key: <code>facebookLink</code>. </small>
+
       </div>
-    </main>
-  </div>
+
+      <div class="form-group jsSettingParent" id="page-setting-twitterLink">
+       <label>Twitter Link</label> <span class="badge badge-success">New</span>
+
+       <input type="hidden" name="setting[1oa6][id]" value="">
+       <input type="hidden" name="setting[1oa6][category]" value="social">
+       <input type="hidden" name="setting[1oa6][setting_key]" value="twitterLink">
+       <input type="text" class="form-control" name="setting[1oa6][setting_value]" value="https://twitter.com"
+        autocomplete="off">
+       <small class="form-text text-muted">Key: <code>twitterLink</code>. </small>
+
+      </div>
+
+      <div class="form-group jsSettingParent" id="page-setting-instagramLink">
+       <label>Instagram Link</label> <span class="badge badge-success">New</span>
+
+       <input type="hidden" name="setting[1h7r][id]" value="">
+       <input type="hidden" name="setting[1h7r][category]" value="social">
+       <input type="hidden" name="setting[1h7r][setting_key]" value="instagramLink">
+       <input type="text" class="form-control" name="setting[1h7r][setting_value]" value="https://www.instagram.com"
+        autocomplete="off">
+       <small class="form-text text-muted">Key: <code>instagramLink</code>. </small>
+
+      </div>
+
+     </div>
+    </div>
+   </form>
+  </main>
+ </div>
 
 </body>
 

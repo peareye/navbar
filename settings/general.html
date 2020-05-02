@@ -2,65 +2,160 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SideNav Layout</title>
-  <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/assets/css/sidebar.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>SideNav Layout</title>
+ <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/assets/css/sidebar.css">
 </head>
 
 <body>
-  <header class="top-header">
-    <div class="logo">
-      <a href="/index.html">Piton<span>CMS</span></a></div>
+ <header class="top-header">
+  <div class="logo">
+   <a href="/index.html">Piton<span>CMS</span></a></div>
+ </header>
 
-    <div class="sidebar">
-    </div>
-  </header>
+ <div class="wrapper">
+  <!-- Navbar Toggle -->
+  <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
 
-  <div class="wrapper">
-    <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-    <aside class="sidebar">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+   <ul class="side-nav">
+    <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
+    <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content.html"> Content</a>
+     <ul class="sub-nav span">
+      <li class="sub-nav__link"><a href="#">Content Pages</a></li>
+      <li class="sub-nav__link"><a href="#">Without Hero</a></li>
+      <li class="sub-nav__link"><a href="#">With Hero</a></li>
+      <div class="nav-divider"></div>
+      <li class="sub-nav__link"><a href="#">Collection Pages</a></li>
+      <li class="sub-nav__link"><a href="#">Test Page</a></li>
+      <li class="sub-nav__link"><a href="#">Collection Group</a></li>
+      <div class="nav-divider"></div>
+      <li class="sub-nav__link"><a href="#">Navigation</a></li>
+     </ul>
+    </li>
+    <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
+    <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a>
+     <div class="badge badge-notify">4</div>
+    </li>
+    <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
+    <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a>
+    </li>
+   </ul>
+  </aside>
 
-      <ul class="side-nav">
-        <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
-        <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content.html"> Content</a>
-          <ul class="sub-nav span">
-            <li class="sub-nav__link"><a href="#">Content Pages</a></li>
-            <li class="sub-nav__link"><a href="#">Without Hero</a></li>
-            <li class="sub-nav__link"><a href="#">With Hero</a></li>
-            <div class="nav-divider"></div>
-            <li class="sub-nav__link"><a href="#">Collection Pages</a></li>
-            <li class="sub-nav__link"><a href="#">Test Page</a></li>
-            <li class="sub-nav__link"><a href="#">Collection Group</a></li>
-            <div class="nav-divider"></div>
-            <li class="sub-nav__link"><a href="#">Navigation</a></li>
-          </ul>
-        </li>
-        <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
-        <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a>
-          <div class="badge badge-notify">4</div>
-        </li>
-        <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
-        <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a>
-        </li>
-      </ul>
+  <main role="main">
+   <form action="/admin/tools/settings/save" method="post" accept-charset="utf-8">
+    <input type="hidden" name="pitonCsrfToken"
+     value="2Wo4vV1+e1R2bijc/NI36iIAlVRTjq6pLGFrhH+3q378cuc14yGxR3USibxGIczVbbCon5T4iPnScMmyF1ppHg==">
+    <input type="hidden" name="category" value="site">
 
-    </aside>
+    <header class="content-header">
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
+     </div>
 
-    <main>
-      <header class="content-header">
-        <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
-        </div>
-      </header>
+     <!-- Control Buttons -->
+     <div class="btn-group">
+      <a class="btn" href="/admin/tools/settings/site">Cancel</a>
+      <button class="btn" type="submit" name="button" value="save">Save</button>
+     </div>
 
-      <div class="content">
-        <h1>General</h1>
+     <!-- Page Title -->
+     <h3 class="section-title"> General Settings</h3>
+
+    </header>
+
+    <div class="content">
+
+     <div class="content-block">
+
+      <div class="form-group jsSettingParent" id="page-setting-dateFormat">
+
+       <label>Date Format</label>
+       <input type="hidden" name="setting[1][id]" value="1">
+       <input type="hidden" name="setting[1][category]" value="site">
+       <input type="hidden" name="setting[1][setting_key]" value="dateFormat">
+
+
+       <select class="form-control" name="setting[1][setting_value]">
+        <option value="mm/dd/yyyy" selected>mm/dd/yyyy</option>
+        <option value="dd-mm-yyyy">dd-mm-yyyy</option>
+        <option value="dd.mm.yyyy">dd.mm.yyyy</option>
+       </select>
+
+       <small class="form-text text-muted">Key: <code>dateFormat</code>. Select date-picker date format
+        preference for your location.</small>
+
       </div>
-    </main>
-  </div>
 
+      <div class="form-group jsSettingParent" id="page-setting-tinifyApiKey">
+       <label>Tinify API Key</label>
+       <input type="hidden" name="setting[14][id]" value="14">
+       <input type="hidden" name="setting[14][category]" value="site">
+       <input type="hidden" name="setting[14][setting_key]" value="tinifyApiKey">
+       <input type="text" class="form-control" name="setting[14][setting_value]"
+        value="mIDPJEsRUm2ZnjK64qzNCazNrHp0lVej" autocomplete="off">
+       <small class="form-text text-muted">Key: <code>tinifyApiKey</code>. Optimize your media files with
+        TinyJPG. Save your API key <a href="https://tinyjpg.com/" target="_blank">https://tinyjpg.com/</a>.</small>
+
+      </div>
+
+      <div class="form-group jsSettingParent" id="page-setting-theme">
+
+       <label>Theme</label>
+       <input type="hidden" name="setting[2][id]" value="2">
+       <input type="hidden" name="setting[2][category]" value="site">
+       <input type="hidden" name="setting[2][setting_key]" value="theme">
+
+
+       <select class="form-control" name="setting[2][setting_value]">
+        <option value="default" selected>Default</option>
+       </select>
+       <small class="form-text text-muted">Key: <code>theme</code>. </small>
+
+      </div>
+
+      <div class="form-group jsSettingParent" id="page-setting-googleWebMaster">
+       <label>Google Webmaster Verification Link</label>
+       <input type="hidden" name="setting[15][id]" value="15">
+       <input type="hidden" name="setting[15][category]" value="site">
+       <input type="hidden" name="setting[15][setting_key]" value="googleWebMaster">
+       <input type="text" class="form-control" name="setting[15][setting_value]" value="" autocomplete="off">
+       <small class="form-text text-muted">Key: <code>googleWebMaster</code>. </small>
+
+      </div>
+
+      <div class="form-group jsSettingParent" id="page-setting-googleAnalytics">
+
+       <label>Google Analytics Code</label>
+       <input type="hidden" name="setting[16][id]" value="16">
+       <input type="hidden" name="setting[16][category]" value="site">
+       <input type="hidden" name="setting[16][setting_key]" value="googleAnalytics">
+
+
+       <textarea class="form-control" rows="3" name="setting[16][setting_value]"></textarea>
+       <small class="form-text text-muted">Key: <code>googleAnalytics</code>. </small>
+      </div>
+
+      <div class="form-group jsSettingParent" id="page-setting-statCounter">
+
+       <label>Stat Counter</label>
+       <input type="hidden" name="setting[17][id]" value="17">
+       <input type="hidden" name="setting[17][category]" value="site">
+       <input type="hidden" name="setting[17][setting_key]" value="statCounter">
+       <textarea class="form-control" rows="3" name="setting[17][setting_value]"></textarea>
+       <small class="form-text text-muted">Key: <code>statCounter</code>. </small>
+      </div>
+
+     </div>
+    </div>
+   </form>
+  </main>
+ </div>
 </body>
 
 </html>

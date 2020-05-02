@@ -2,59 +2,131 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SideNav Layout</title>
-  <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/assets/css/sidebar.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>SideNav Layout</title>
+ <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/assets/css/sidebar.css">
 </head>
 
 <body>
-  <header class="top-header">
-    <div class="logo">
-      <a href="/index.html">Piton<span>CMS</span></a></div>
-  
-    <div class="sidebar">
-    </div>
-  </header>
+ <header class="top-header">
+  <div class="logo">
+   <a href="/index.html">Piton<span>CMS</span></a></div>
+ </header>
 
-  <div class="wrapper">
-    <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-    <aside class="sidebar">
-  
-      <ul class="side-nav">
-        <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
-        <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content.html"> Content</a> 
-          <ul class="sub-nav span" >
-            <li class="sub-nav__link"><a href="#">Content Pages</a></li>
-            <li class="sub-nav__link"><a href="#">Without Hero</a></li>
-            <li class="sub-nav__link"><a href="#">With Hero</a></li>
-            <div class="nav-divider"></div>
-            <li class="sub-nav__link"><a href="#">Collection Pages</a></li>
-            <li class="sub-nav__link"><a href="#">Test Page</a></li>
-            <li class="sub-nav__link"><a href="#">Collection Group</a></li>
-            <div class="nav-divider"></div>
-            <li class="sub-nav__link"><a href="#">Navigation</a></li>
-          </ul>
-        </li>
-        <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
-        <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a> <div class="badge badge-notify">4</div> </li>
-        <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
-        <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a></li>
-      </ul>
-  
-    </aside>
+ <div class="wrapper">
+  <!-- Nav Toggle -->
+  <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
 
-    <main>
-      <header class="content-header">
-        <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a> </div>
-      </header>
-      <div class="content">
-<h1>Users</h1>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+   <ul class="side-nav">
+    <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
+    <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content.html"> Content</a>
+     <ul class="sub-nav span">
+      <li class="sub-nav__link"><a href="#">Content Pages</a></li>
+      <li class="sub-nav__link"><a href="#">Without Hero</a></li>
+      <li class="sub-nav__link"><a href="#">With Hero</a></li>
+      <div class="nav-divider"></div>
+      <li class="sub-nav__link"><a href="#">Collection Pages</a></li>
+      <li class="sub-nav__link"><a href="#">Test Page</a></li>
+      <li class="sub-nav__link"><a href="#">Collection Group</a></li>
+      <div class="nav-divider"></div>
+      <li class="sub-nav__link"><a href="#">Navigation</a></li>
+     </ul>
+    </li>
+    <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
+    <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a>
+     <div class="badge badge-notify">4</div>
+    </li>
+    <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
+    <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a>
+    </li>
+   </ul>
+  </aside>
+
+  <main role="main">
+   <form class="jsUserForm" action="/admin/tools/user/save" method="post" accept-charset="utf-8">
+    <input type="hidden" name="pitonCsrfToken"
+     value="2Wo4vV1+e1R2bijc/NI36iIAlVRTjq6pLGFrhH+3q378cuc14yGxR3USibxGIczVbbCon5T4iPnScMmyF1ppHg==">
+
+    <header class="content-header">
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
+     </div>
+
+     <!-- Control Buttons -->
+     <div class="btn-group">
+      <button type="button" class="btn jsAddUserRow">Add User</button>
+      <button type="submit" name="button" class="btn">Save User(s)</button>
+      <a class="btn" href="/admin/tools/user/">Cancel</a>
+     </div>
+
+     <!-- Page Title -->
+     <h3 class="section-title"> User Settings</h3>
+
+    </header>
+
+    <div class="content">
+     <!-- Content Here -->
+     <div class="content-block">
+      <div class="one-admin-notice span">
+       <p>You only have one Administrator email registered. You should consider adding a second Administrator recovery
+        email address.</p>
       </div>
-    </main>
-  </div>
+
+      <div class="form-group jsUser">
+       <input type="hidden" name="user_id[enya]" value="1">
+
+       <input type="email" class="form-control" name="email[enya]" maxlength="255" value="peri.moritz@gmail.com"
+        autocomplete="off" required>
+
+       <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="admin[enya]" id="admin-enya" checked>
+        <label class="form-check-label" for="admin-enya">Administrator</label>
+       </div>
+
+       <button class="btn" formaction="/admin/tools/user/changeStatus/1/N"> Deactivate </button>
+      </div>
+
+      <div class="form-group jsUser">
+
+       <input type="hidden" name="user_id[7yfj]" value="2">
+       <input type="email" class="form-control" name="email[7yfj]" maxlength="255" value="peareye@yahoo.com"
+        autocomplete="off" required>
+
+       <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="admin[7yfj]" id="admin-7yfj">
+        <label class="form-check-label" for="admin-7yfj">Administrator</label>
+       </div>
+
+       <button class="btn" formaction="/admin/tools/user/changeStatus/2/N"> Deactivate </button>
+      </div>
+
+      <div class="form-group jsUser">
+
+       <input type="hidden" name="user_id[19i8]" value="3">
+
+       <input type="email" class="form-control" name="email[19i8]" maxlength="255" value="wolfmoritz@gmail.com"
+        autocomplete="off" required>
+
+
+       <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="admin[19i8]" id="admin-19i8">
+        <label class="form-check-label" for="admin-19i8">Administrator</label>
+       </div>
+
+       <button class="btn" formaction="/admin/tools/user/changeStatus/3/N">
+        Deactivate </button>
+      </div>
+
+     </div>
+    </div>
+   </form>
+  </main>
+ </div>
 
 </body>
 

@@ -2,60 +2,109 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SideNav Layout</title>
-  <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/assets/css/sidebar.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>SideNav Layout</title>
+ <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/assets/css/sidebar.css">
 </head>
 
 <body>
-  <header class="top-header">
-    <div class="logo">
-      <a href="/index.html">Piton<span>CMS</span></a></div>
-  
-    <div class="sidebar">
+ <header class="top-header">
+  <div class="logo">
+   <a href="/index.html">Piton<span>CMS</span></a></div>
+ </header>
+
+ <div class="wrapper">
+  <!-- Nav Toggle -->
+  <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+   <ul class="side-nav">
+    <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
+    <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content.html"> Content</a>
+     <ul class="sub-nav span">
+      <li class="sub-nav__link"><a href="#">Content Pages</a></li>
+      <li class="sub-nav__link"><a href="#">Without Hero</a></li>
+      <li class="sub-nav__link"><a href="#">With Hero</a></li>
+      <div class="nav-divider"></div>
+      <li class="sub-nav__link"><a href="#">Collection Pages</a></li>
+      <li class="sub-nav__link"><a href="#">Test Page</a></li>
+      <li class="sub-nav__link"><a href="#">Collection Group</a></li>
+      <div class="nav-divider"></div>
+      <li class="sub-nav__link"><a href="#">Navigation</a></li>
+     </ul>
+    </li>
+    <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
+    <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a>
+     <div class="badge badge-notify">4</div>
+    </li>
+    <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
+    <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a>
+    </li>
+   </ul>
+  </aside>
+
+  <main role="main">
+   <form action="/admin/tools/settings/save" method="post" accept-charset="utf-8">
+    <input type="hidden" name="pitonCsrfToken"
+     value="2Wo4vV1+e1R2bijc/NI36iIAlVRTjq6pLGFrhH+3q378cuc14yGxR3USibxGIczVbbCon5T4iPnScMmyF1ppHg==">
+    <input type="hidden" name="category" value="contact">
+
+    <header class="content-header">
+     <!-- Breadcrumbs -->
+     <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
+     </div>
+
+     <!-- Control Buttons -->
+     <div class="btn-group">
+      <a class="btn" href="/admin/tools/settings/contact">Cancel</a>
+      <button class="btn" type="submit" name="button" value="save">Save</button>
+     </div>
+
+     <!-- Page Title -->
+     <h3 class="section-title"> Contact Settings</h3>
+
+    </header>
+
+    <div class="content">
+     <!-- Content Here -->
+  <div class="content-block">
+
+    <div class="form-group jsSettingParent" id="page-setting-contactFormEmail">
+     <label>Contact Form Email</label>
+     <input type="hidden" name="setting[18][id]" value="18">
+     <input type="hidden" name="setting[18][category]" value="contact">
+     <input type="hidden" name="setting[18][setting_key]" value="contactFormEmail">
+     <input type="text" class="form-control" name="setting[18][setting_value]" value="" autocomplete="off">
+     <small class="form-text text-muted">Key: <code>contactFormEmail</code>. Contact form submissions are sent to this
+      email.</small>
+
     </div>
-  </header>
 
-  <div class="wrapper">
-    <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-    <aside class="sidebar">
-  
-      <ul class="side-nav">
-        <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
-        <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content.html"> Content</a> 
-          <ul class="sub-nav span" >
-            <li class="sub-nav__link"><a href="#">Content Pages</a></li>
-            <li class="sub-nav__link"><a href="#">Without Hero</a></li>
-            <li class="sub-nav__link"><a href="#">With Hero</a></li>
-            <div class="nav-divider"></div>
-            <li class="sub-nav__link"><a href="#">Collection Pages</a></li>
-            <li class="sub-nav__link"><a href="#">Test Page</a></li>
-            <li class="sub-nav__link"><a href="#">Collection Group</a></li>
-            <div class="nav-divider"></div>
-            <li class="sub-nav__link"><a href="#">Navigation</a></li>
-          </ul>
-        </li>
-        <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
-        <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a> <div class="badge badge-notify">4</div> </li>
-        <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
-        <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a></li>
-      </ul>
-  
-    </aside>
+    <div class="form-group jsSettingParent" id="page-setting-contactFormAcknowledgement">
 
-    <main>
-      <header class="content-header">
-        <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a> </div>
-      </header>
-      <div class="content">
-<h1>Contact</h1>
-      </div>
-    </main>
+     <label>Contact Form Submission Acknowledgement</label>
+     <input type="hidden" name="setting[19][id]" value="19">
+     <input type="hidden" name="setting[19][category]" value="contact">
+     <input type="hidden" name="setting[19][setting_key]" value="contactFormAcknowledgement">
+
+
+     <textarea class="form-control" rows="3" name="setting[19][setting_value]">Thank You</textarea>
+     <small class="form-text text-muted">Key: <code>contactFormAcknowledgement</code>. Message to display after the
+      contact form is submitted.</small>
+    </div>
   </div>
+
+
+    </div>
+   </form>
+  </main>
+ </div>
 
 </body>
 
 </html>
+
