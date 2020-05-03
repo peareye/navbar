@@ -5,7 +5,7 @@ main {
 }
 
 .content-header {
-    background: $off-white;
+    background: $bg-accent;
     height: $nav-height;
     width: 100%;
     @include padding(.5em);
@@ -42,7 +42,7 @@ main {
         align-items: center;
 
         &:hover {
-            background: $off-white;
+            background: $bg-accent;
         }
 
         p {
@@ -110,7 +110,7 @@ main {
         color: $clr-accent;
 
         &:hover {
-            color: $dark-grey;
+            color: $txt-dark;
         }
     }
 }
@@ -139,10 +139,10 @@ main {
     justify-content: center;
     align-items: center;
     height: 80px;
-    border-top: solid 1px $blue-light;
+    border-top: solid 1px $clr-border;
 
     &:hover {
-        background: $blue-light;
+        background: $bg-blue;
     }
 
     &__heading {
@@ -151,7 +151,7 @@ main {
     }
 
     &:last-child {
-        border-bottom: solid 1px $blue-light;
+        border-bottom: solid 1px $clr-border;
     }
 
     &__media {
@@ -194,7 +194,7 @@ main {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: $off-white;
+    background-color: $bg-accent;
     min-width: 160px;
     box-shadow: $box-shadow-1;
     z-index: 1;
@@ -215,7 +215,7 @@ main {
 .dropdown-divider {
     @include margin(0);
     @include padding(0);
-    color: rgba($black, .25);
+    color: rgba($clr-text, .25);
 }
 .dropdown-content a:hover {
     background-color: #ddd;

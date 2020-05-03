@@ -460,8 +460,8 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: #fff;
-  background: #fff;
+  background: white;
+  background: white;
 }
 
 body {
@@ -491,6 +491,58 @@ body {
           flex-grow: 999;
 }
 
+/* Html Element Styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #eb7119;
+}
+
+/* Utility Classes */
+.nav-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(64, 64, 64, 0.25);
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.span {
+  grid-column: 1 / -1;
+}
+
+.badge {
+  width: 100%;
+  height: 50%;
+  margin-right: 13px;
+  border-radius: 7px;
+  background: #3e5d1d;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.published {
+  color: green;
+  text-transform: capitalize;
+}
+
+.draft {
+  color: grey;
+  text-transform: capitalize;
+}
+
+.pending {
+  color: gold;
+  text-transform: capitalize;
+}
+
+/* Top Header Area Style */
 /* Header, Logo, Hamburger Toggle */
 .top-header {
   padding-right: 1em;
@@ -533,57 +585,6 @@ body {
 
 .top-header .logo a span {
   text-transform: lowercase;
-}
-
-/* Html Element Styles */
-h1, h2, h3, h4, h5, h6 {
-  color: #eb7119;
-}
-
-/* Utility Classes */
-.nav-divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(64, 64, 64, 0.25);
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-}
-
-.span {
-  grid-column: 1 / -1;
-}
-
-.badge {
-  width: 100%;
-  height: 50%;
-  margin-right: 13px;
-  border-radius: 7px;
-  background: #3e5d1d;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.published {
-  color: green;
-  text-transform: capitalize;
-}
-
-.draft {
-  color: grey;
-  text-transform: capitalize;
-}
-
-.pending {
-  color: gold;
-  text-transform: capitalize;
 }
 
 main {
@@ -859,7 +860,7 @@ main {
 .dropdown-divider {
   margin: 0;
   padding: 0;
-  color: rgba(83, 35, 35, 0.25);
+  color: rgba(64, 64, 64, 0.25);
 }
 
 .dropdown-content a:hover {

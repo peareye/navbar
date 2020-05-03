@@ -1,0 +1,38 @@
+/* Top Header Area Style */
+/* Header, Logo, Hamburger Toggle */
+.top-header {
+  @include padding(null 1em);
+  background-color: $clr-text;
+  height: $nav-height;
+  color: $nav-font-color;
+  position: relative;
+
+  @media screen and (min-width: $breakpoint) {
+    // Media Query Here
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: $nav-height;
+    display: flex;
+    justify-content: flex-end;
+    @media screen and (min-width: $breakpoint) {
+      justify-content: flex-start;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+
+      span {
+        text-transform: lowercase;
+      }
+    }
+  }
+}

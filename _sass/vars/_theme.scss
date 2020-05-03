@@ -1,5 +1,4 @@
 // color theme
-
 $black: hsl(0, 41%, 23%);
 $white: hsl(0, 0%, 100%);
 $off-white: hsl(210, 22%, 96%);
@@ -17,6 +16,8 @@ $nav-font-color: $light-orange;
 $link-hover-color: $dark-orange;
 
 $box-shadow: 0 2px 2px rgba($black, .5);
+$box-shadow-1: 0 0 0 1px rgba(63, 63, 68, .05),
+0 1px 3px 0 rgba(63, 63, 68, .15);
 $border-radius: 7px;
 
 // Text Colors
@@ -25,7 +26,23 @@ $clr-h: $dark-orange;
 $clr-text: $dark-grey;
 $clr-accent: $dark-orange;
 
-// Default color Styles
+$txt-light: $white;
+$txt-dark: $dark-grey;
+$txt-accent: $dark-orange;
 
-$box-shadow-1: 0 0 0 1px rgba(63, 63, 68, .05),
-0 1px 3px 0 rgba(63, 63, 68, .15)
+$text-warning: gold;
+$text-danger: red;
+$text-success: green;
+
+// Background Colors
+
+$bg-dark: $black;
+$bg-light: $white;
+$bg-accent: $off-white;
+$bg-blue: $blue-light;
+
+
+// Default color Styles
+$badge-notify: $dark-green;
+$badge-warning: $dark-orange;
+$clr-border: $blue-light;
