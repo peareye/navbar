@@ -21,23 +21,6 @@ body {
 
 }
 
-/* Layout */
-.wrapper {
-  // min-height: calc(100% - #{$nav-height});
-  min-height: 100%;
-  @include padding(#{$nav-height} null null null);
-  display: flex;
-  flex-flow: row nowrap;
-  position: relative;
-} 
-
-.content {
-  @include padding(1em);
-  flex-basis: 0;
-  flex-grow: 999;
-}
-
-
 
 /* Html Element Styles */
 

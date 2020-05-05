@@ -168,10 +168,15 @@
 .form-inner {
  @include padding(1em);
  display: grid;
- grid-template-columns: 300px repeat(auto-fill, minmax(150px, 1fr));
- gap: 2rem;
+ grid-template-columns: repeat(3, 1fr);
+ // grid-template-columns: 300px repeat(auto-fill, minmax(150px, 1fr));
+
+ gap: .5rem;
  justify-self: center;
  align-items: center;
+ @media screen and (min-width: $breakpoint){
+  grid-template-columns: 3fr repeat(2, 1fr);
+ }
 
  .page-search-input {
   @include margin(0);

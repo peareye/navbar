@@ -1,6 +1,5 @@
 .sidebar {
- width: 30%;
- max-width: 270px;
+ min-width: 270px;
  flex-grow: 1;
  background: $bg-accent;
  font-size: .875rem;
@@ -19,7 +18,8 @@
  @media screen and (min-width: $breakpoint) {
   transform: scale(1, 1);
   display: block;
-  position: static;
+  position: fixed;
+  height: calc(100vh - #{$nav-height});
  }
 
  .side-nav {
@@ -27,23 +27,19 @@
   display: flex;
   flex-flow: column nowrap;
 
-  .active {
-   background-color: rgba($bg-blue, .25);
-   cursor: not-allowed;
-
-   &:hover {
-    background-color: rgba($bg-blue, .25);
-    cursor: not-allowed;
-   }
-  }
-
   &__link {
+   height: $nav-height;
    @include padding(null .5em);
-   // line-height: 1.7rem;
+
    display: grid;
    grid-template-columns: 20px 1fr 20px;
    align-items: center;
    column-gap: .25em;
+
+   &:hover {
+    background-color: $bg-blue;
+    cursor: not-allowed;
+   }
 
    a {
     @include padding(.5em);
@@ -56,15 +52,21 @@
     }
 
     &:hover {
-     background: $bg-blue;
+     // background: $bg-blue;
      color: $clr-text;
     }
    }
   }
+
+  .active {
+   background-color: rgba($bg-blue, .5);
+   cursor: not-allowed;
+  }
+
  }
 
  .settings {
-  // @include margin(auto null 1rem null);
+  @include margin(auto null 1rem null);
  }
 
  .fas {
