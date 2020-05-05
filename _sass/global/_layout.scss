@@ -5,13 +5,11 @@
  background-color: $clr-text;
  height: $nav-height;
  color: $nav-font-color;
- // position: relative;
+
  position: fixed;
  width: 100%;
  z-index: 120;
  box-shadow: $box-shadow;
-
- // display: none;
 
  @media screen and (min-width: $breakpoint) {
   // Media Query Here
@@ -51,14 +49,15 @@
  display: flex;
  flex-flow: row nowrap;
  position: relative;
- @media screen and (min-width: $breakpoint){
-  @include padding(#{$nav-height} null null 270px);
+
+ @media screen and (min-width: $breakpoint) {
+  @include padding(#{$nav-height} null null #{$nav-width});
  }
 }
 
 .content {
  @include padding(1em);
- // flex-basis: 0;
- // flex-grow: 999;
- // min-height: 150vh;
+ flex-basis: 0;
+ flex-grow: 999;
+ min-height: 150vh;
 }

@@ -1,5 +1,6 @@
 .sidebar {
- min-width: 270px;
+ min-width: $nav-width;
+ height: calc(100vh - #{$nav-height});
  flex-grow: 1;
  background: $bg-accent;
  font-size: .875rem;
@@ -9,7 +10,7 @@
  left: 0;
  bottom: 0;
  top: $nav-height;
- z-index: 100;
+ z-index: 119;
 
  transform: scale(0, 1);
  transform-origin: left;
@@ -38,7 +39,7 @@
 
    &:hover {
     background-color: $bg-blue;
-    cursor: not-allowed;
+  
    }
 
    a {
@@ -53,14 +54,20 @@
 
     &:hover {
      // background: $bg-blue;
-     color: $clr-text;
+     color: $clr-accent;
     }
    }
   }
 
   .active {
    background-color: rgba($bg-blue, .5);
-   cursor: not-allowed;
+ 
+   &:hover{
+    cursor: default;
+    a{
+     color: $clr-text;
+    }
+   }
   }
 
  }
