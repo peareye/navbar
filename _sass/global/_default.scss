@@ -35,7 +35,10 @@ a{
   }
 }
 
- 
+::selection {
+ background-color: $clr-accent;
+ color: $txt-light;
+}
 /* Utility Classes */
 .nav-divider {
   width: 100%;

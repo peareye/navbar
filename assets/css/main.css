@@ -475,6 +475,16 @@ a:hover {
   color: rgba(64, 64, 64, 0.75);
 }
 
+::-moz-selection {
+  background-color: #eb7119;
+  color: white;
+}
+
+::selection {
+  background-color: #eb7119;
+  color: white;
+}
+
 /* Utility Classes */
 .nav-divider {
   width: 100%;
