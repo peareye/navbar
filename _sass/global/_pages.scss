@@ -1,242 +1,238 @@
-main {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
+.main-content {
+ display: flex;
+ flex-flow: column nowrap;
+ width: 100%;
 }
 
 .content-header {
-    background: $bg-accent;
-    height: $nav-height;
-    width: 100%;
-    // @include padding(.5em);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+ background: $bg-accent;
+ height: $nav-height;
+ width: 100%;
+ @include padding(null .5em);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 
-    .section-title {
-        @include margin(0);
-        @include padding(0);
-        font-weight: 900;
-        font-size: 1.6rem;
-    }
+ .section-title {
+  @include margin(0);
+  @include padding(0);
+  font-weight: 900;
+  font-size: 1.6rem;
+ }
 }
 
 .content {
-    @include padding(1em);
+ @include padding(1em);
 
-    .content-cards {
-        @include margin(2rem null);
-        width: 80%;
-        max-width: 960px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-        gap: 2em;
-    }
+ .content-cards {
+  @include margin(2rem null);
+  width: 80%;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 2em;
+ }
 
-    .content-card {
-        @include padding(.5em);
-        border-radius: $border-radius;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: .25em .5em;
-        align-items: center;
+ .content-card {
+  @include padding(.5em);
+  border-radius: $border-radius;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .25em .5em;
+  align-items: center;
 
-        &:hover {
-            background: $bg-accent;
-        }
+  &:hover {
+   background: $bg-accent;
+  }
 
-        p {
-            grid-column: 2 / -1;
-            font-size: .75rem;
-            color: rgba($clr-text, .75);
-        }
+  p {
+   grid-column: 2 / -1;
+   font-size: .75rem;
+   color: rgba($clr-text, .75);
+  }
 
-        .card-icon {
-            // background: pink;
-            font-size: 1.3rem;
-            color: rgba($clr-text, .5);
+  .card-icon {
+   font-size: 1.3rem;
+   color: rgba($clr-text, .5);
+  }
 
-        }
+  padding-right: 1rem;
 
-        padding-right: 1rem;
-
-        .title-text {
-            margin: 0;
-        }
-    }
+  .title-text {
+   margin: 0;
+  }
+ }
 }
 
 .content-block {
-    @include margin(1rem);
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 2rem;
+ @include margin(1rem);
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+ gap: 2rem;
 
-    .form-group {
-        @include padding(1rem);
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        box-shadow: $box-shadow-1;
+ .form-group {
+  @include padding(1rem);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: $box-shadow-1;
 
-        &__title-wrapper {
+  &__title-wrapper {
 
-            display: flex;
-            width: 100%;
-            justify-content: flex-start;
+   display: flex;
+   width: 100%;
+   justify-content: flex-start;
 
-            label {
-                flex: 1;
-            }
+   label {
+    flex: 1;
+   }
 
-            .badge {
-                flex: 0;
-                padding: .125em .25em;
-            }
-
-
-        }
-
-    }
+   .badge {
+    flex: 0;
+    padding: .125em .25em;
+   }
+  }
+ }
 }
 
 .breadcrumb {
-    font-weight: 300;
-    font-size: .75rem;
+ font-weight: 300;
+ font-size: .75rem;
 
+ a {
+  color: $clr-accent;
 
-    a {
-        color: $clr-accent;
-
-        &:hover {
-            color: $txt-dark;
-        }
-    }
+  &:hover {
+   color: $txt-dark;
+  }
+ }
 }
 
 .btn-group {
-    //  flex: 1;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    @include padding(null 1em);
-
-    *+* {
-        @include margin(null null null 1em);
-    }
+ *+* {
+  @include margin(null null null 1em);
+ }
 }
 
 /* Page Content Styles */
 
 .page-list-item,
 .page-list-item-header {
-    display: grid;
-    grid-template-columns: 80px 200px 150px 1fr;
-    gap: 2vw;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    border-top: solid 1px $clr-border;
+ display: grid;
+ grid-template-columns: 80px 200px 150px 1fr;
+ gap: 2vw;
+ justify-content: center;
+ align-items: center;
+ height: 80px;
+ border-top: solid 1px $clr-border;
 
-    &:hover {
-        background: $bg-blue;
-    }
+ &:hover {
+  background: $bg-blue;
+ }
 
-    &__heading {
+ &__heading {
 
-        font-size: 1.1rem;
-    }
+  font-size: 1.1rem;
+ }
 
-    &:last-child {
-        border-bottom: solid 1px $clr-border;
-    }
+ &:last-child {
+  border-bottom: solid 1px $clr-border;
+ }
 
-    &__media {
-        object-fit: cover;
-        @include padding(.5em);
-    }
+ &__media {
+  object-fit: cover;
+  @include padding(.5em);
+ }
 
-    &__title {
-        font-weight: 700;
-    }
+ &__title {
+  font-weight: 700;
+ }
 
 }
 
 .page-list-item-header {
-    height: 40px;
+ height: 40px;
 }
 
 .add-user {
-    justify-self: flex-start;
-    align-self: flex-start;
+ justify-self: flex-start;
+ align-self: flex-start;
 }
 
 .form-inner {
-    @include padding(1em);
-    display: grid;
-    grid-template-columns: 300px repeat(auto-fill, minmax(150px, 1fr));
-    gap: 2rem;
-    justify-self: center;
-    align-items: center;
+ @include padding(1em);
+ display: grid;
+ grid-template-columns: 300px repeat(auto-fill, minmax(150px, 1fr));
+ gap: 2rem;
+ justify-self: center;
+ align-items: center;
 
-    .page-search-input {
-        @include margin(0);
-    }
+ .page-search-input {
+  @include margin(0);
+ }
 }
+
 .dropdown {
-    position: relative;
-    display: block;
+ position: relative;
+ display: block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: $bg-accent;
-    min-width: 160px;
-    box-shadow: $box-shadow-1;
-    z-index: 1;
+ display: none;
+ position: absolute;
+ background-color: $bg-accent;
+ min-width: 160px;
+ box-shadow: $box-shadow-1;
+ z-index: 1;
 }
 
-.dropdown-content a, .dropdown-title {
-    color: black;
-    @include padding(.5em);
-    text-decoration: none;
-    display: block;
-}
+.dropdown-content a,
 .dropdown-title {
-    font-weight: 700;
-    @include padding(.5em .5em 0 .5em);
-    @include margin(0);
- 
+ color: black;
+ @include padding(.5em);
+ text-decoration: none;
+ display: block;
 }
+
+.dropdown-title {
+ font-weight: 700;
+ @include padding(.5em .5em 0 .5em);
+ @include margin(0);
+
+}
+
 .dropdown-divider {
-    @include margin(0);
-    @include padding(0);
-    color: rgba($clr-text, .25);
+ @include margin(0);
+ @include padding(0);
+ color: rgba($clr-text, .25);
 }
+
 .dropdown-content a:hover {
-    background-color: #ddd;
+ background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    justify-self: center;
-    @include padding(.5em);
+ display: grid;
+ grid-template-columns: auto 1fr;
+ align-items: center;
+ justify-self: center;
+ @include padding(.5em);
 }
 
 
 .btn-dropdown {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-label {
-    margin: 0;
-    padding: 0;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 
+label {
+ margin: 0;
+ padding: 0;
+}

@@ -1,91 +1,91 @@
 .sidebar {
-  width: 30%;
-  max-width: 270px;
-  flex-grow: 1;
-  background: $bg-accent;
-  font-size: .875rem;
-  font-weight: 500;
+ width: 30%;
+ max-width: 270px;
+ flex-grow: 1;
+ background: $bg-accent;
+ font-size: .875rem;
+ font-weight: 500;
 
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  top: 0;
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ top: $nav-height;
+ z-index: 100;
 
-  transform: scale(0,1);
-  transform-origin: left;
-  transition: transform 250ms ease-in-out;
-  // display: none;
+ transform: scale(0, 1);
+ transform-origin: left;
+ transition: transform 250ms ease-in-out;
 
-  @media screen and (min-width: $breakpoint) {
-    transform: scale(1, 1);
-    display: block;
-    position: static;
+ @media screen and (min-width: $breakpoint) {
+  transform: scale(1, 1);
+  display: block;
+  position: static;
+ }
+
+ .side-nav {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  .active {
+   background-color: rgba($bg-blue, .25);
+   cursor: not-allowed;
+
+   &:hover {
+    background-color: rgba($bg-blue, .25);
+    cursor: not-allowed;
+   }
   }
-  
-  .side-nav {
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
 
-    .active {
-      background-color: rgba($bg-blue, .25);
-      cursor: not-allowed;
+  &__link {
+   @include padding(null .5em);
+   // line-height: 1.7rem;
+   display: grid;
+   grid-template-columns: 20px 1fr 20px;
+   align-items: center;
+   column-gap: .25em;
 
-      &:hover {
-        background-color: rgba($bg-blue, .25);
-        cursor: not-allowed;
-      }
+   a {
+    @include padding(.5em);
+    line-height: 1.7rem;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out 125ms;
+
+    @media screen and (min-width: $breakpoint) {
+     opacity: 1;
     }
 
-    &__link {
-      @include padding(null .5em);
-      // line-height: 1.7rem;
-      display: grid;
-      grid-template-columns: 20px 1fr 20px;
-      align-items: center;
-      column-gap: .25em;
-
-      a {
-        @include padding(.5em);
-        line-height: 1.7rem;
-        opacity: 0;
-        transition: opacity 250ms ease-in-out 125ms;
-
-        @media screen and (min-width: $breakpoint) {
-          opacity: 1;
-        }
-
-        &:hover {
-          background: $bg-blue;
-          color: $clr-text;
-        }
-      }
+    &:hover {
+     background: $bg-blue;
+     color: $clr-text;
     }
+   }
   }
+ }
 
-  .settings {
-    @include margin(auto null 1rem null);
-  }
+ .settings {
+  // @include margin(auto null 1rem null);
+ }
 
-  .fas {
-    color: rgba($clr-text, .35);
-    @include margin(null 1rem null .25em);
-    font-size: 1rem;
-  }
+ .fas {
+  color: rgba($clr-text, .35);
+  @include margin(null 1rem null .25em);
+  font-size: 1rem;
+ }
 
-  .sub-nav {
-    grid-column: 2 / -1;
-    list-style: none;
-    @include margin(null null null 1em);
-  }
+ .sub-nav {
+  grid-column: 2 / -1;
+  list-style: none;
+  @include margin(null null null 1em);
+ }
 
 }
+
 .nav-toggle:checked~.sidebar {
-  display: block;
-  transform: scale(1, 1);
+ display: block;
+ transform: scale(1, 1);
 }
 
 .nav-toggle:checked~.sidebar a {
-  opacity: 1;
+ opacity: 1;
 }
-

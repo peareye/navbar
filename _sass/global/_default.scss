@@ -6,7 +6,7 @@
   padding: 0;
   text-decoration: none;
 }
-
+ 
 html,
 body {
   width: 100%;
@@ -23,7 +23,8 @@ body {
 
 /* Layout */
 .wrapper {
-  height: calc(100% - #{$nav-height});
+  // min-height: calc(100% - #{$nav-height});
+  min-height: 100%;
   @include padding(#{$nav-height} null null null);
   display: flex;
   flex-flow: row nowrap;
