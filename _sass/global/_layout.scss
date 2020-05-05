@@ -5,18 +5,25 @@
   background-color: $clr-text;
   height: $nav-height;
   color: $nav-font-color;
-  position: relative;
+  // position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  box-shadow: $box-shadow;
+
+  // display: none;
 
   @media screen and (min-width: $breakpoint) {
     // Media Query Here
   }
-  
+
   .logo {
     font-size: 2rem;
     font-weight: 900;
     line-height: $nav-height;
     display: flex;
     justify-content: flex-end;
+
     @media screen and (min-width: $breakpoint) {
       justify-content: flex-start;
     }

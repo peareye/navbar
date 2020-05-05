@@ -24,7 +24,8 @@
   <aside class="sidebar">
    <ul class="side-nav">
     <li class="side-nav__link home active"><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
-    <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content/content.html"> Pages</a></li>
+    <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content/content.html"> Pages</a>
+    </li>
     <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
     <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a>
      <div class="badge badge-notify">4</div>
@@ -35,7 +36,7 @@
    </ul>
   </aside>
 
-  <main role="main">
+  <main role="main" class="main-content">
    <form action="/admin/tools/settings/save" method="post" accept-charset="utf-8">
     <input type="hidden" name="pitonCsrfToken"
      value="2Wo4vV1+e1R2bijc/NI36iIAlVRTjq6pLGFrhH+3q378cuc14yGxR3USibxGIczVbbCon5T4iPnScMmyF1ppHg==">
@@ -46,16 +47,16 @@
      <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
      </div>
 
- 
+
 
      <!-- Page Title -->
      <h3 class="section-title"> Social Settings</h3>
 
-         <!-- Control Buttons -->
-         <div class="btn-group">
-          <a class="btn" href="/admin/tools/settings/social">Cancel</a>
-          <button class="btn" type="submit" name="button" value="save">Save</button>
-         </div>
+     <!-- Control Buttons -->
+     <div class="btn-group">
+      <a class="btn" href="/admin/tools/settings/social">Cancel</a>
+      <button class="btn" type="submit" name="button" value="save">Save</button>
+     </div>
 
     </header>
 
@@ -78,12 +79,12 @@
       </div>
 
       <div class="form-group jsSettingParent" id="page-setting-twitterLink">
-<div class="form-group__title-wrapper">
- <div class="badge badge-new">New</div>
- <label>Twitter Link</label>
-</div>
-      
-      
+       <div class="form-group__title-wrapper">
+        <div class="badge badge-new">New</div>
+        <label>Twitter Link</label>
+       </div>
+
+
 
        <input type="hidden" name="setting[1oa6][id]" value="">
        <input type="hidden" name="setting[1oa6][category]" value="social">

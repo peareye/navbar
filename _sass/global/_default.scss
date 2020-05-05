@@ -6,12 +6,6 @@
   padding: 0;
   text-decoration: none;
 }
-a{
-  color: $clr-text;
-  &:hover {
-    color: rgba($clr-text, .5);
-  }
-}
 
 html,
 body {
@@ -30,6 +24,7 @@ body {
 /* Layout */
 .wrapper {
   height: calc(100% - #{$nav-height});
+  @include padding(#{$nav-height} null null null);
   display: flex;
   flex-flow: row nowrap;
   position: relative;
@@ -48,7 +43,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: $clr-h;
 }
-
+a{
+  text-decoration: none;
+  color: $clr-text;
+  &:hover {
+    color: rgba($clr-text, .75);
+  }
+}
 
  
 /* Utility Classes */
