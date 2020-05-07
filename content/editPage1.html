@@ -2,62 +2,74 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SideNav Layout</title>
-<script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/assets/css/main.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>SideNav Layout</title>
+ <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
-<header class="top-header">
-<div class="logo">
-<a href="/index.html">Piton<span>CMS</span></a></div>
-</header>
+ <header class="top-header">
+  <div class="logo">
+   <a href="/index.html">Piton<span>CMS</span></a></div>
+ </header>
 
-<div class="wrapper">
-<input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
-<label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-<aside class="sidebar">
-<ul class="side-nav">
-<li class="side-nav__link home "><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
-<li class="side-nav__link pageContent active"><i class="fas fa-pencil-alt"> </i><a href="/content/content.html">
-Pages</a></li>
-<li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media/media.html"> Media</a></li>
-<li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html">Messages</a>
-<div class="badge badge-notify">4</div>
-</li>
-<li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help/help.html"> Help</a></li>
-<li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html">Settings</a></li>
-</ul>
-</aside>
+ <div class="wrapper">
+  <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+  <aside class="sidebar">
+   <ul class="side-nav">
+    <li class="side-nav__link home "><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
+    <li class="side-nav__link pageContent active"><i class="fas fa-pencil-alt"> </i><a href="/content/content.html">
+      Pages</a></li>
+    <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media/media.html"> Media</a></li>
+    <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html">Messages</a>
+     <div class="badge badge-notify">4</div>
+    </li>
+    <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help/help.html"> Help</a></li>
+    <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html">Settings</a></li>
+   </ul>
+  </aside>
 
-<main role="main" class="main-content">
-<header class="content-header">
-<div class="breadcrumb"></div>
-<h3 class="section-title">Page Title Here</h3>
-<div class="btn-group">
-<a class="btn btn-cancel btn-sm" type="cancel" href="/admin/page/">Cancel</a>
-<button class="btn btn-publish btn-sm" type="submit" name="publish_now"
-title="Save page and publish now">Publish</button>
-<button class="btn btn-save btn-sm" type="submit" title="Save page">Save</button>
+  <main role="main" class="main-content">
+   <header class="content-header">
+    <div class="container">
+     <div class="breadcrumb"></div>
+     <h3 class="section-title">Page Title Here</h3>
+     <div class="btn-group">
+      <a class="btn btn-cancel btn-sm" type="cancel" href="/admin/page/">Cancel</a>
+      <button class="btn btn-publish btn-sm" type="submit" name="publish_now"
+       title="Save page and publish now">Publish</button>
+      <button class="btn btn-save btn-sm" type="submit" title="Save page">Save</button>
+     </div>
+    </div>
+   </header>
+
+   <div class="content">
+<div class="container">
+ <div class="btn-group">
+  <button class="btn btn-save">Save Button</button>
+  <button class="btn btn-add">Add Button</button>
+  <button class="btn btn-save btn-sm">Small Save Button</button>
+  <button class="btn btn-publish">Publish Button</button>
+  <a href="#" class="btn btn-cancel">Cancel Button</a>
+  <button class="btn btn-save btn-save-disabled">Disabled Save Button</button>
+ </div>
+
+     <!-- End content container -->
+ 
+     <div class="btn-group btn-group-bottom">
+      <!-- <button class="btn btn-delete btn-sm jsDeleteConfirm" type="submit" formaction="/admin/page/delete">Delete</button> -->
+     </div>
 </div>
-</header>
+   </div>
 
-<div class="content">
+  </main>
+ </div>
 
-<!-- End content container -->
-
-<div class="btn-group btn-group-bottom">
-<button class="btn btn-delete btn-sm jsDeleteConfirm" type="submit" formaction="/admin/page/delete">Delete</button>
-</div>
-</div>
-
-</main>
-</div>
-
-<!-- Media Modal -->
-<!-- <div class="modal fade" id="mediaModal" tabindex="-1">
+ <!-- Media Modal -->
+ <!-- <div class="modal fade" id="mediaModal" tabindex="-1">
  <div class="modal-dialog modal-dialog-centered modal-lg">
  <div class="modal-content">
  <div class="modal-body">

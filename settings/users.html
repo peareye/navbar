@@ -42,80 +42,84 @@
      value="2Wo4vV1+e1R2bijc/NI36iIAlVRTjq6pLGFrhH+3q378cuc14yGxR3USibxGIczVbbCon5T4iPnScMmyF1ppHg==">
 
     <header class="content-header">
-     <!-- Breadcrumbs -->
-     <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
-     </div>
+     <div class="container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
+      </div>
 
-     <!-- Page Title -->
-     <h3 class="section-title"> User Settings</h3>
+      <!-- Page Title -->
+      <h3 class="section-title"> User Settings</h3>
 
-     <!-- Control Buttons -->
-     <div class="btn-group">
-      <a class="btn btn-cancel btn-sm" href="/admin/tools/user/">Cancel</a>
-      <button type="submit" name="button" class="btn btn-save btn-sm">Save User(s)</button>
+      <!-- Control Buttons -->
+      <div class="btn-group">
+       <a class="btn btn-cancel btn-sm" href="/admin/tools/user/">Cancel</a>
+       <button type="submit" name="button" class="btn btn-save btn-sm">Save User(s)</button>
+      </div>
      </div>
 
     </header>
 
     <div class="content">
-     <!-- Content Here -->
-     <div class="content-block">
-      <div class="one-admin-notice span">
-       <p>You only have one Administrator email registered. You should consider adding a second Administrator
-        recovery
-        email address.</p>
-      </div>
-
-      <div class="form-group jsUser">
-       <input type="hidden" name="user_id[enya]" value="1">
-
-       <input type="email" class="form-control" name="email[enya]" maxlength="255" value="peri.moritz@gmail.com"
-        autocomplete="off" required>
-
-       <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="admin[enya]" id="admin-enya" checked>
-        <label class="form-check-label" for="admin-enya">Administrator</label>
+     <div class="container">
+      <!-- Content Here -->
+      <div class="content-block">
+       <div class="one-admin-notice span">
+        <p>You only have one Administrator email registered. You should consider adding a second Administrator
+         recovery
+         email address.</p>
        </div>
 
-       <button class="btn" formaction="/admin/tools/user/changeStatus/1/N"> Deactivate </button>
-      </div>
+       <div class="user-card jsUser">
+        <input type="hidden" name="user_id[enya]" value="1">
 
-      <div class="form-group jsUser">
+        <input type="email" class="form-control" name="email[enya]" maxlength="255" value="peri.moritz@gmail.com"
+         autocomplete="off" required>
 
-       <input type="hidden" name="user_id[7yfj]" value="2">
-       <input type="email" class="form-control" name="email[7yfj]" maxlength="255" value="peareye@yahoo.com"
-        autocomplete="off" required>
+        <div class="form-check">
+         <input class="form-check-input" type="checkbox" name="admin[enya]" id="admin-enya" checked>
+         <label class="form-check-label" for="admin-enya">Administrator</label>
+        </div>
 
-       <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="admin[7yfj]" id="admin-7yfj">
-        <label class="form-check-label" for="admin-7yfj">Administrator</label>
+        <button class="btn btn-cancel" formaction="/admin/tools/user/changeStatus/1/N"> Deactivate </button>
        </div>
 
-       <button class="btn" formaction="/admin/tools/user/changeStatus/2/N"> Deactivate </button>
-      </div>
+       <div class="user-card jsUser">
 
-      <div class="form-group jsUser">
+        <input type="hidden" name="user_id[7yfj]" value="2">
+        <input type="email" class="form-control" name="email[7yfj]" maxlength="255" value="peareye@yahoo.com"
+         autocomplete="off" required>
 
-       <input type="hidden" name="user_id[19i8]" value="3">
+        <div class="form-check">
+         <input class="form-check-input" type="checkbox" name="admin[7yfj]" id="admin-7yfj">
+         <label class="form-check-label" for="admin-7yfj">Administrator</label>
+        </div>
 
-       <input type="email" class="form-control" name="email[19i8]" maxlength="255" value="wolfmoritz@gmail.com"
-        autocomplete="off" required>
-
-
-       <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="admin[19i8]" id="admin-19i8">
-        <label class="form-check-label" for="admin-19i8">Administrator</label>
+        <button class="btn btn-cancel" formaction="/admin/tools/user/changeStatus/2/N"> Deactivate </button>
        </div>
 
-       <button class="btn" formaction="/admin/tools/user/changeStatus/3/N">
-        Deactivate </button>
+       <div class="user-card jsUser">
+
+        <input type="hidden" name="user_id[19i8]" value="3">
+
+        <input type="email" class="form-control" name="email[19i8]" maxlength="255" value="wolfmoritz@gmail.com"
+         autocomplete="off" required>
+
+
+        <div class="form-check">
+         <input class="form-check-input" type="checkbox" name="admin[19i8]" id="admin-19i8">
+         <label class="form-check-label" for="admin-19i8">Administrator</label>
+        </div>
+
+        <button class="btn btn-cancel" formaction="/admin/tools/user/changeStatus/3/N">
+         Deactivate </button>
+       </div>
+
+       <div class="btn-group add-user">
+        <button type="button" class="btn btn-add jsAddUserRow" title="Add New User"><i class="fas fa-plus"></i></button>
+
+       </div>
+
       </div>
-
-      <div class="btn-group add-user">
-       <button type="button" class="btn jsAddUserRow" title="Add New User"><i class="fas fa-plus"></i></button>
-
-      </div>
-
      </div>
     </div>
    </form>

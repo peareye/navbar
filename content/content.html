@@ -33,49 +33,50 @@
   </aside>
 
   <main role="main" class="main-content">
-
    <header class="content-header">
-    <div class="breadcrumb"></div>
-    <h3 class="section-title">All Pages</h3>
-    
+    <div class="container">
+     <div class="breadcrumb">&nbsp;</div>
+     <h3 class="section-title">All Pages</h3>
      <div class="btn-dropdown-block">
-      <button class="btn btn-add"><span>Add&nbsp;&nbsp;&nbsp;</span> <span><i class="fas fa-chevron-down"></i></span> </button>
+      <button class="btn btn-add"><span>Add&nbsp;&nbsp;&nbsp;</span> <span><i class="fas fa-chevron-down"></i></span>
+      </button>
       <div class="form-group-block">
        <div class="form-group">
-        <input type="radio" id="without-hero" name="template" value="without-hero">
-        <label for="without-hero">Without Hero</label>
+        <input type="radio" id="withoutHero" name="template" value="withoutHero">
+        <label for="withoutHero">Without Hero</label>
        </div>
        <div class="form-group">
-        <input type="radio" id="with-hero" name="template" value="with-hero">
-        <label for="with-hero">With Hero</label>
+        <input type="radio" id="withHero" name="template" value="withHero">
+        <label for="withHero">With Hero</label>
        </div>
       </div>
      </div>
+    </div>
    </header>
-   
-   <div class="content">
 
-     <form class="filter-block">
-    
+   <div class="content">
+    <div class="container">
+     <div class="page-list-item-filter">
+      <form class="filter-block">
+
        <div class="search-block">
         <div class="search-icon">
          <i class="fas fa-search"></i>
         </div>
         <div class="search-input">
-         <input type="search" name="search" id="search" class="search" placeholder="Search" autocomplete="false">
+         <input type="search" name="search" id="search" class="search" placeholder="Search Media" autocomplete="false">
         </div>
        </div>
-
        <div class="btn-dropdown-block">
-        <button class="btn btn-dropdown btn-sm"><span>By Status</span> <span><i class="fas fa-chevron-down"></i></span> </button>
+        <button class="btn btn-dropdown btn-sm">Filter by Status&nbsp;&nbsp;<i class="fas fa-chevron-down"></i></button>
         <div class="form-group-block">
-         <div class="form-group">
-          <input type="radio" id="pending" name="status" value="pending">
-          <label for="pending">Pending</label>
-         </div>
          <div class="form-group">
           <input type="radio" id="published" name="status" value="published">
           <label for="published">Published</label>
+         </div>
+         <div class="form-group">
+          <input type="radio" id="Pending" name="status" value="Pending">
+          <label for="Pending">Pending</label>
          </div>
          <div class="form-group">
           <input type="radio" id="draft" name="status" value="draft">
@@ -85,85 +86,109 @@
        </div>
 
        <div class="btn-dropdown-block">
-        <button class="btn btn-dropdown btn-sm"><span>By Template</span> <span><i class="fas fa-chevron-down"></i></span> </button>
+        <button class="btn btn-dropdown btn-sm">Filter by Template&nbsp;&nbsp;<i
+          class="fas fa-chevron-down"></i></button>
+
         <div class="form-group-block">
+         <p class="dropdown-title">Pages</p>
          <div class="form-group">
-          <input type="radio" id="without-hero" name="template" value="without-hero">
-          <label for="without-hero">Without Hero</label>
+          <input type="radio" id="withHero" name="gender" value="withHero">
+          <label for="withHero">With Hero</label>
          </div>
          <div class="form-group">
-          <input type="radio" id="with-hero" name="template" value="with-hero">
-          <label for="with-hero">With Hero</label>
+          <input type="radio" id="withoutHero" name="gender" value="withoutHero">
+          <label for="withoutHero">Without Hero</label>
+         </div>
+         <hr class="dropdown-divider span">
+         <p class="dropdown-title">Collections</p>
+         <div class="form-group">
+          <input type="radio" id="holidayRecipe" name="gender" value="holidayRecipe">
+          <label for="holidayRecipe">Holiday Recipes</label>
+         </div>
+         <div class="form-group">
+          <input type="radio" id="ketoRecipe" name="gender" value="ketoRecipe">
+          <label for="ketoRecipe">Keto Recipes</label>
+         </div>
+         <div class="form-group">
+          <input type="radio" id="services" name="gender" value="services">
+          <label for="services">Blog Post</label>
          </div>
         </div>
        </div>
 
-     </form>
-   
 
-    <div class="page-list-item-header">
-     <div class="page-list-item__heading"></div>
-     <div class="page-list-item__heading">Title</div>
-     <div class="page-list-item__heading">Status</div>
-     <div class="page-list-item__heading">Template</div>
+       <div class="page-list-item-search">
+
+       </div>
+       <div class="page-list-item__heading"></div>
+       <div class="page-list-item__heading"></div>
+      </form>
+     </div>
+
+     <div class="page-list-item-header">
+      <div class="page-list-item__heading"></div>
+      <div class="page-list-item__heading">Title</div>
+      <div class="page-list-item__heading">Status</div>
+      <div class="page-list-item__heading">Template</div>
+     </div>
+
+     <!-- Page List Item -->
+     <a class="page-list-item" href="editPage1.html">
+      <div class="page-list-item__media"><img src="https://unsplash.it/100/101" alt=""></div>
+      <div class="page-list-item__title" title="Hero">Hero</div>
+      <div class="page-list-item__status draft">Draft</div>
+      <div class="page-list-item__template">Template: heroPage</div>
+
+     </a>
+     <a class="page-list-item" href="#">
+      <div class="page-list-item__media"><img src="https://unsplash.it/100/100" alt=""></div>
+      <div class="page-list-item__title" title="Hero">Contact Us</div>
+      <div class="page-list-item__status published">Published</div>
+      <div class="page-list-item__template">Template: heroPage</div>
+     </a>
+     <a class="page-list-item" href="#">
+      <div class="page-list-item__media"><img src="https://unsplash.it/100/103" alt=""></div>
+      <div class="page-list-item__title" title="Hero">Services</div>
+      <div class="page-list-item__status published">published</div>
+      <div class="page-list-item__template">Template: heroPage</div>
+     </a>
+     <a class="page-list-item" href="#">
+      <div class="page-list-item__media"><img src="https://unsplash.it/100/104" alt=""></div>
+      <div class="page-list-item__title" title="Hero">Kaiser Schmarren</div>
+      <div class="page-list-item__status pending">pending</div>
+      <div class="page-list-item__template">Template: baking</div>
+     </a>
+     <a class="page-list-item" href="#">
+      <div class="page-list-item__media"></div>
+      <div class="page-list-item__title" title="Hero">Services</div>
+      <div class="page-list-item__status published">published</div>
+      <div class="page-list-item__template">Template: heroPage</div>
+     </a>
+     <a class="page-list-item" href="#">
+      <div class="page-list-item__media"><img src="https://unsplash.it/101/104" alt=""></div>
+      <div class="page-list-item__title" title="Hero">Services</div>
+      <div class="page-list-item__status published">published</div>
+      <div class="page-list-item__template">Template: heroPage</div>
+     </a>
+     <a class="page-list-item" href="#">
+      <div class="page-list-item__media"><img src="https://unsplash.it/100/104" alt=""></div>
+      <div class="page-list-item__title" title="Hero">Kaiser Schmarren</div>
+      <div class="page-list-item__status published">published</div>
+      <div class="page-list-item__template">Template: baking</div>
+     </a>
+     <a class="page-list-item" href="#">
+      <div class="page-list-item__media"></div>
+      <div class="page-list-item__title" title="Hero">Services</div>
+      <div class="page-list-item__status published">published</div>
+      <div class="page-list-item__template">Template: heroPage</div>
+     </a>
+     <a class="page-list-item" href="#">
+      <div class="page-list-item__media"><img src="https://unsplash.it/101/104" alt=""></div>
+      <div class="page-list-item__title" title="Hero">Services</div>
+      <div class="page-list-item__status published">published</div>
+      <div class="page-list-item__template">Template: heroPage</div>
+     </a>
     </div>
-
-    <!-- Page List Item -->
-    <a class="page-list-item" href="editPage1.html">
-     <div class="page-list-item__media"><img src="https://unsplash.it/100/101" alt=""></div>
-     <div class="page-list-item__title" title="Hero">Hero</div>
-     <div class="page-list-item__status draft">Draft</div>
-     <div class="page-list-item__template">Template: heroPage</div>
-
-    </a>
-    <a class="page-list-item" href="#">
-     <div class="page-list-item__media"><img src="https://unsplash.it/100/100" alt=""></div>
-     <div class="page-list-item__title" title="Hero">Contact Us</div>
-     <div class="page-list-item__status published">Published</div>
-     <div class="page-list-item__template">Template: heroPage</div>
-    </a>
-    <a class="page-list-item" href="#">
-     <div class="page-list-item__media"><img src="https://unsplash.it/100/103" alt=""></div>
-     <div class="page-list-item__title" title="Hero">Services</div>
-     <div class="page-list-item__status published">published</div>
-     <div class="page-list-item__template">Template: heroPage</div>
-    </a>
-    <a class="page-list-item" href="#">
-     <div class="page-list-item__media"><img src="https://unsplash.it/100/104" alt=""></div>
-     <div class="page-list-item__title" title="Hero">Kaiser Schmarren</div>
-     <div class="page-list-item__status pending">pending</div>
-     <div class="page-list-item__template">Template: baking</div>
-    </a>
-    <a class="page-list-item" href="#">
-     <div class="page-list-item__media"></div>
-     <div class="page-list-item__title" title="Hero">Services</div>
-     <div class="page-list-item__status published">published</div>
-     <div class="page-list-item__template">Template: heroPage</div>
-    </a>
-    <a class="page-list-item" href="#">
-     <div class="page-list-item__media"><img src="https://unsplash.it/101/104" alt=""></div>
-     <div class="page-list-item__title" title="Hero">Services</div>
-     <div class="page-list-item__status published">published</div>
-     <div class="page-list-item__template">Template: heroPage</div>
-    </a>
-    <a class="page-list-item" href="#">
-     <div class="page-list-item__media"><img src="https://unsplash.it/100/104" alt=""></div>
-     <div class="page-list-item__title" title="Hero">Kaiser Schmarren</div>
-     <div class="page-list-item__status published">published</div>
-     <div class="page-list-item__template">Template: baking</div>
-    </a>
-    <a class="page-list-item" href="#">
-     <div class="page-list-item__media"></div>
-     <div class="page-list-item__title" title="Hero">Services</div>
-     <div class="page-list-item__status published">published</div>
-     <div class="page-list-item__template">Template: heroPage</div>
-    </a>
-    <a class="page-list-item" href="#">
-     <div class="page-list-item__media"><img src="https://unsplash.it/101/104" alt=""></div>
-     <div class="page-list-item__title" title="Hero">Services</div>
-     <div class="page-list-item__status published">published</div>
-     <div class="page-list-item__template">Template: heroPage</div>
-    </a>
    </div>
 
   </main>

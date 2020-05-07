@@ -41,8 +41,9 @@ button,
 .btn {
  width: 100%;
  background: darkmagenta;
- color: white;
+ color: $txt-light;
  border-radius: $border-radius;
+
  &:hover {
   background: hue($clr-accent);
   cursor: pointer;
@@ -53,6 +54,7 @@ button,
  @include padding(.5em .75em);
  font-size: .875rem;
 }
+
 .btn-dropdown {
  @include padding(1em);
  background: $bg-blue;
@@ -69,15 +71,38 @@ button,
 }
 
 .btn-publish {
- background: green !important;
+ background: $btn-green !important;
+
+ &:hover {
+  background: $btn-green-hover !important;
+ }
 }
+
 .btn-save {
- background: blue !important;
+ background: $btn-blue !important;
+
+ &:hover {
+  background: $btn-blue-hover !important;
+ }
+
+ &-disabled {
+  background: $btn-blue-disabled !important;
+  cursor: not-allowed;
+  &:hover{
+   background: $btn-blue-disabled !important;
+   cursor: not-allowed;
+  }
+ }
 }
 
 .btn-delete {
- background: red !important;
+ background: $btn-red !important;
+
+ &:hover {
+  background: $btn-red-hover !important;
+ }
 }
+
 .btn-cancel {
  @include margin(0);
  @include padding(0);
@@ -88,6 +113,6 @@ button,
 
  &:hover {
   color: $link-hover-color;
-  
+
  }
 }

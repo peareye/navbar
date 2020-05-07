@@ -28,3 +28,18 @@
   }
  }
 }
+.user-card,
+.contact-block,
+.settings-block,
+.social-block,
+.sitemap-block {
+ @include padding(1em);
+ background: $bg-blue;
+ border-radius: $border-radius;
+ box-shadow: $box-shadow-2;
+ display: flex;
+ flex-flow: column nowrap;
+*+*{
+ @include margin(1em null null null);
+}
+}

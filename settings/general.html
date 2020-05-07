@@ -43,102 +43,106 @@
     <input type="hidden" name="category" value="site">
 
     <header class="content-header">
-     <!-- Breadcrumbs -->
-     <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
-     </div>
-
-     <!-- Page Title -->
-     <h3 class="section-title"> General Settings</h3>
-
-      <!-- Control Buttons -->
-      <div class="btn-group">
-        <a class="btn btn-cancel btn-sm" href="/admin/tools/settings/site">Cancel</a>
-        <button class="btn btn-save btn-sm" type="submit" name="button" value="save">Save</button>
-       </div>
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
+      </div>
+ 
+      <!-- Page Title -->
+      <h3 class="section-title"> General Settings</h3>
+ 
+       <!-- Control Buttons -->
+       <div class="btn-group">
+         <a class="btn btn-cancel btn-sm" href="/admin/tools/settings/site">Cancel</a>
+         <button class="btn btn-save btn-sm" type="submit" name="button" value="save">Save</button>
+        </div>
+    </div>
     </header>
 
     <div class="content">
 
-     <div class="content-block">
-
-      <div class="form-group jsSettingParent" id="page-setting-dateFormat">
-
-       <label>Date Format</label>
-       <input type="hidden" name="setting[1][id]" value="1">
-       <input type="hidden" name="setting[1][category]" value="site">
-       <input type="hidden" name="setting[1][setting_key]" value="dateFormat">
-
-
-       <select class="form-control" name="setting[1][setting_value]">
-        <option value="mm/dd/yyyy" selected>mm/dd/yyyy</option>
-        <option value="dd-mm-yyyy">dd-mm-yyyy</option>
-        <option value="dd.mm.yyyy">dd.mm.yyyy</option>
-       </select>
-
-       <small class="form-text text-muted">Key: <code>dateFormat</code>. Select date-picker date format
-        preference for your location.</small>
-
+    <div class="container">
+      <div class="content-block">
+ 
+       <div class="settings-block jsSettingParent" id="page-setting-dateFormat">
+ 
+        <label>Date Format</label>
+        <input type="hidden" name="setting[1][id]" value="1">
+        <input type="hidden" name="setting[1][category]" value="site">
+        <input type="hidden" name="setting[1][setting_key]" value="dateFormat">
+ 
+ 
+        <select class="form-control" name="setting[1][setting_value]">
+         <option value="mm/dd/yyyy" selected>mm/dd/yyyy</option>
+         <option value="dd-mm-yyyy">dd-mm-yyyy</option>
+         <option value="dd.mm.yyyy">dd.mm.yyyy</option>
+        </select>
+ 
+        <small class="form-text text-muted">Key: <code>dateFormat</code>. Select date-picker date format
+         preference for your location.</small>
+ 
+       </div>
+ 
+       <div class="settings-block jsSettingParent" id="page-setting-tinifyApiKey">
+        <label>Tinify API Key</label>
+        <input type="hidden" name="setting[14][id]" value="14">
+        <input type="hidden" name="setting[14][category]" value="site">
+        <input type="hidden" name="setting[14][setting_key]" value="tinifyApiKey">
+        <input type="text" class="form-control" name="setting[14][setting_value]"
+         value="mIDPJEsRUm2ZnjK64qzNCazNrHp0lVej" autocomplete="off">
+        <small class="form-text text-muted">Key: <code>tinifyApiKey</code>. Optimize your media files with
+         TinyJPG. Save your API key <a href="https://tinyjpg.com/" target="_blank">https://tinyjpg.com/</a>.</small>
+ 
+       </div>
+ 
+       <div class="settings-block jsSettingParent" id="page-setting-theme">
+ 
+        <label>Theme</label>
+        <input type="hidden" name="setting[2][id]" value="2">
+        <input type="hidden" name="setting[2][category]" value="site">
+        <input type="hidden" name="setting[2][setting_key]" value="theme">
+ 
+ 
+        <select class="form-control" name="setting[2][setting_value]">
+         <option value="default" selected>Default</option>
+        </select>
+        <small class="form-text text-muted">Key: <code>theme</code>. </small>
+ 
+       </div>
+ 
+       <div class="settings-block jsSettingParent" id="page-setting-googleWebMaster">
+        <label>Google Webmaster Verification Link</label>
+        <input type="hidden" name="setting[15][id]" value="15">
+        <input type="hidden" name="setting[15][category]" value="site">
+        <input type="hidden" name="setting[15][setting_key]" value="googleWebMaster">
+        <input type="text" class="form-control" name="setting[15][setting_value]" value="" autocomplete="off">
+        <small class="form-text text-muted">Key: <code>googleWebMaster</code>. </small>
+ 
+       </div>
+ 
+       <div class="settings-block jsSettingParent" id="page-setting-googleAnalytics">
+ 
+        <label>Google Analytics Code</label>
+        <input type="hidden" name="setting[16][id]" value="16">
+        <input type="hidden" name="setting[16][category]" value="site">
+        <input type="hidden" name="setting[16][setting_key]" value="googleAnalytics">
+ 
+ 
+        <textarea class="form-control" rows="3" name="setting[16][setting_value]"></textarea>
+        <small class="form-text text-muted">Key: <code>googleAnalytics</code>. </small>
+       </div>
+ 
+       <div class="settings-block jsSettingParent" id="page-setting-statCounter">
+ 
+        <label>Stat Counter</label>
+        <input type="hidden" name="setting[17][id]" value="17">
+        <input type="hidden" name="setting[17][category]" value="site">
+        <input type="hidden" name="setting[17][setting_key]" value="statCounter">
+        <textarea class="form-control" rows="3" name="setting[17][setting_value]"></textarea>
+        <small class="form-text text-muted">Key: <code>statCounter</code>. </small>
+       </div>
+ 
       </div>
-
-      <div class="form-group jsSettingParent" id="page-setting-tinifyApiKey">
-       <label>Tinify API Key</label>
-       <input type="hidden" name="setting[14][id]" value="14">
-       <input type="hidden" name="setting[14][category]" value="site">
-       <input type="hidden" name="setting[14][setting_key]" value="tinifyApiKey">
-       <input type="text" class="form-control" name="setting[14][setting_value]"
-        value="mIDPJEsRUm2ZnjK64qzNCazNrHp0lVej" autocomplete="off">
-       <small class="form-text text-muted">Key: <code>tinifyApiKey</code>. Optimize your media files with
-        TinyJPG. Save your API key <a href="https://tinyjpg.com/" target="_blank">https://tinyjpg.com/</a>.</small>
-
-      </div>
-
-      <div class="form-group jsSettingParent" id="page-setting-theme">
-
-       <label>Theme</label>
-       <input type="hidden" name="setting[2][id]" value="2">
-       <input type="hidden" name="setting[2][category]" value="site">
-       <input type="hidden" name="setting[2][setting_key]" value="theme">
-
-
-       <select class="form-control" name="setting[2][setting_value]">
-        <option value="default" selected>Default</option>
-       </select>
-       <small class="form-text text-muted">Key: <code>theme</code>. </small>
-
-      </div>
-
-      <div class="form-group jsSettingParent" id="page-setting-googleWebMaster">
-       <label>Google Webmaster Verification Link</label>
-       <input type="hidden" name="setting[15][id]" value="15">
-       <input type="hidden" name="setting[15][category]" value="site">
-       <input type="hidden" name="setting[15][setting_key]" value="googleWebMaster">
-       <input type="text" class="form-control" name="setting[15][setting_value]" value="" autocomplete="off">
-       <small class="form-text text-muted">Key: <code>googleWebMaster</code>. </small>
-
-      </div>
-
-      <div class="form-group jsSettingParent" id="page-setting-googleAnalytics">
-
-       <label>Google Analytics Code</label>
-       <input type="hidden" name="setting[16][id]" value="16">
-       <input type="hidden" name="setting[16][category]" value="site">
-       <input type="hidden" name="setting[16][setting_key]" value="googleAnalytics">
-
-
-       <textarea class="form-control" rows="3" name="setting[16][setting_value]"></textarea>
-       <small class="form-text text-muted">Key: <code>googleAnalytics</code>. </small>
-      </div>
-
-      <div class="form-group jsSettingParent" id="page-setting-statCounter">
-
-       <label>Stat Counter</label>
-       <input type="hidden" name="setting[17][id]" value="17">
-       <input type="hidden" name="setting[17][category]" value="site">
-       <input type="hidden" name="setting[17][setting_key]" value="statCounter">
-       <textarea class="form-control" rows="3" name="setting[17][setting_value]"></textarea>
-       <small class="form-text text-muted">Key: <code>statCounter</code>. </small>
-      </div>
-
      </div>
     </div>
    </form>

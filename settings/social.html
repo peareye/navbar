@@ -43,76 +43,81 @@
     <input type="hidden" name="category" value="social">
 
     <header class="content-header">
-     <!-- Breadcrumbs -->
-     <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
-     </div>
+<div class="container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb"><a href="/settings/settings.html"><i class="fas fa-chevron-left"></i> Settings</a>
+      </div>
+ 
+ 
+ 
+      <!-- Page Title -->
+      <h3 class="section-title"> Social Settings</h3>
+ 
+      <!-- Control Buttons -->
+      <div class="btn-group">
+       <a class="btn btn-cancel btn-sm" href="/admin/tools/settings/social">Cancel</a>
+       <button class="btn btn-save btn-sm" type="submit" name="button" value="save">Save</button>
+      </div>
 
-
-
-     <!-- Page Title -->
-     <h3 class="section-title"> Social Settings</h3>
-
-     <!-- Control Buttons -->
-     <div class="btn-group">
-      <a class="btn btn-cancel btn-sm" href="/admin/tools/settings/social">Cancel</a>
-      <button class="btn btn-save btn-sm" type="submit" name="button" value="save">Save</button>
-     </div>
-
+</div> 
     </header>
 
     <div class="content">
-     <!-- Content Here -->
-     <div class="content-block">
-
-      <div class="form-group jsSettingParent" id="page-setting-facebookLink">
-       <div class="form-group__title-wrapper">
-        <div class="badge badge-new">New</div>
-        <label>Facebook Link</label>
+    <div class="container">
+      <!-- Content Here -->
+      <div class="content-block">
+ 
+       <div class="social-block jsSettingParent" id="page-setting-facebookLink">
+        <div class="form-group__title-wrapper">
+         <div class="badge badge-new">New</div>
+         <label>Facebook Link</label>
+        </div>
+ 
+        <input type="hidden" name="setting[tks0][id]" value="">
+        <input type="hidden" name="setting[tks0][category]" value="social">
+        <input type="hidden" name="setting[tks0][setting_key]" value="facebookLink">
+        <input type="text" class="form-control" name="setting[tks0][setting_value]" value="https://www.facebook.com"
+         autocomplete="off">
+        <small class="form-text text-muted">Key: <code>facebookLink</code>. </small>
        </div>
-
-       <input type="hidden" name="setting[tks0][id]" value="">
-       <input type="hidden" name="setting[tks0][category]" value="social">
-       <input type="hidden" name="setting[tks0][setting_key]" value="facebookLink">
-       <input type="text" class="form-control" name="setting[tks0][setting_value]" value="https://www.facebook.com"
-        autocomplete="off">
-       <small class="form-text text-muted">Key: <code>facebookLink</code>. </small>
-      </div>
-
-      <div class="form-group jsSettingParent" id="page-setting-twitterLink">
-       <div class="form-group__title-wrapper">
-        <div class="badge badge-new">New</div>
-        <label>Twitter Link</label>
+ 
+       <div class="social-block jsSettingParent" id="page-setting-twitterLink">
+        <div class="form-group__title-wrapper">
+         <div class="badge badge-new">New</div>
+         <label>Twitter Link</label>
+        </div>
+ 
+ 
+ 
+        <input type="hidden" name="setting[1oa6][id]" value="">
+        <input type="hidden" name="setting[1oa6][category]" value="social">
+        <input type="hidden" name="setting[1oa6][setting_key]" value="twitterLink">
+        <input type="text" class="form-control" name="setting[1oa6][setting_value]" value="https://twitter.com"
+         autocomplete="off">
+        <small class="form-text text-muted">Key: <code>twitterLink</code>. </small>
+ 
        </div>
-
-
-
-       <input type="hidden" name="setting[1oa6][id]" value="">
-       <input type="hidden" name="setting[1oa6][category]" value="social">
-       <input type="hidden" name="setting[1oa6][setting_key]" value="twitterLink">
-       <input type="text" class="form-control" name="setting[1oa6][setting_value]" value="https://twitter.com"
-        autocomplete="off">
-       <small class="form-text text-muted">Key: <code>twitterLink</code>. </small>
-
-      </div>
-
-      <div class="form-group jsSettingParent" id="page-setting-instagramLink">
-       <div class="form-group__title-wrapper">
-        <div class="badge badge-new">New</div>
-        <label>Instagram Link</label>
+ 
+       <div class="social-block jsSettingParent" id="page-setting-instagramLink">
+        <div class="form-group__title-wrapper">
+         <div class="badge badge-new">New</div>
+         <label>Instagram Link</label>
+        </div>
+ 
+ 
+        <input type="hidden" name="setting[1h7r][id]" value="">
+        <input type="hidden" name="setting[1h7r][category]" value="social">
+        <input type="hidden" name="setting[1h7r][setting_key]" value="instagramLink">
+        <input type="text" class="form-control" name="setting[1h7r][setting_value]" value="https://www.instagram.com"
+         autocomplete="off">
+        <small class="form-text text-muted">Key: <code>instagramLink</code>. </small>
+ 
        </div>
-
-
-       <input type="hidden" name="setting[1h7r][id]" value="">
-       <input type="hidden" name="setting[1h7r][category]" value="social">
-       <input type="hidden" name="setting[1h7r][setting_key]" value="instagramLink">
-       <input type="text" class="form-control" name="setting[1h7r][setting_value]" value="https://www.instagram.com"
-        autocomplete="off">
-       <small class="form-text text-muted">Key: <code>instagramLink</code>. </small>
-
+ 
       </div>
-
-     </div>
+ 
     </div>
+   </div>
    </form>
   </main>
  </div>

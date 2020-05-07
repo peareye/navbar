@@ -35,25 +35,29 @@
 
   <main role="main" class="main-content">
    <header class="content-header">
-    <div class="breadcrumb"></div>
-    <h3 class="section-title">All Media</h3>
-    <div class="btn-dropdown-block">
-     <button class="btn btn-add"><span>Add&nbsp;&nbsp;&nbsp;</span> <span><i class="fas fa-chevron-down"></i></span> </button>
-     <div class="form-group-block">
-      <div class="form-group">
-       <input type="radio" id="media" name="template" value="media">
-       <label for="media">Media</label>
-      </div>
-      <div class="form-group">
-       <input type="radio" id="New Category" name="template" value="New Category">
-       <label for="New Category">New Category</label>
+    <div class="container">
+     <div class="breadcrumb"></div>
+     <h3 class="section-title">All Media</h3>
+     <div class="btn-dropdown-block">
+      <button class="btn btn-add"><span>Add&nbsp;&nbsp;&nbsp;</span> <span><i class="fas fa-chevron-down"></i></span>
+      </button>
+      <div class="form-group-block">
+       <div class="form-group">
+        <input type="radio" id="media" name="template" value="media">
+        <label for="media">Media</label>
+       </div>
+       <div class="form-group">
+        <input type="radio" id="New Category" name="template" value="New Category">
+        <label for="New Category">New Category</label>
+       </div>
       </div>
      </div>
     </div>
    </header>
 
    <div class="content">
-    <!-- Media Filter -->
+    <div class="container">
+     <!-- Media Filter -->
      <form class="filter-block">
 
       <div class="search-block">
@@ -66,7 +70,8 @@
       </div>
 
       <div class="btn-dropdown-block">
-       <button class="btn btn-dropdown btn-sm"><span>By Category</span> <span><i class="fas fa-chevron-down"></i></span> </button>
+       <button class="btn btn-dropdown btn-sm"><span>By Category</span> <span><i class="fas fa-chevron-down"></i></span>
+       </button>
        <div class="form-group-block">
         <div class="form-group">
          <input type="radio" id="everything" name="category" value="everything">
@@ -83,75 +88,75 @@
        </div>
       </div>
      </form>
-    
 
-    <!-- Media List -->
-    <div class="media-wrapper">
 
-     <div class="media jsMediaCard">
-      <form class="mediaForm" action="/admin/media/save" method="post" accept-charset="utf-8">
-       <input type="hidden" name="pitonCsrfToken"
-        value="2Wo4vV1+e1R2bijc/NI36iIAlVRTjq6pLGFrhH+3q378cuc14yGxR3USibxGIczVbbCon5T4iPnScMmyF1ppHg==">
-       <input type="hidden" name="media_id" value="4">
+     <!-- Media List -->
+     <div class="media-wrapper">
 
-       <!-- Media Image Thumb w/popup -->
-       <div class="mediaPopup">
-        <img src="https://unsplash.it/640/480" class="mediaImageThumb" alt="Demo Picture" data-caption="Demo Picture"
-         data-media-id="3">
+      <div class="media jsMediaCard">
+       <form class="mediaForm" action="/admin/media/save" method="post" accept-charset="utf-8">
+        <input type="hidden" name="pitonCsrfToken"
+         value="2Wo4vV1+e1R2bijc/NI36iIAlVRTjq6pLGFrhH+3q378cuc14yGxR3USibxGIczVbbCon5T4iPnScMmyF1ppHg==">
+        <input type="hidden" name="media_id" value="4">
 
-        <span class="mediaPopupImg">
-         <img src="https://unsplash.it/640/480" class="mediaImageThumbPopup" alt="Demo Picture"
-          data-caption="Demo Picture" data-media-id="3">
-        </span>
-       </div>
+        <!-- Media Image Thumb w/popup -->
+        <div class="mediaPopup">
+         <img src="https://unsplash.it/640/480" class="mediaImageThumb" alt="Demo Picture" data-caption="Demo Picture"
+          data-media-id="3">
 
-       <div class="mediaBlock">
-        <!-- Media Caption Input -->
-        <div class="mediaCaption">
-         <input type="text" class="form-control form-control-sm" name="caption" value="Demo Picture"
-          placeholder="No caption">
+         <span class="mediaPopupImg">
+          <img src="https://unsplash.it/640/480" class="mediaImageThumbPopup" alt="Demo Picture"
+           data-caption="Demo Picture" data-media-id="3">
+         </span>
         </div>
-        <!-- Media Featured Status -->
-        <div class="mediaFeatured">
-         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="feature-4" name="feature">
-          <label class="form-check-label" for="feature-4">Featured Media?</label>
+
+        <div class="mediaBlock">
+         <!-- Media Caption Input -->
+         <div class="mediaCaption">
+          <input type="text" class="form-control form-control-sm" name="caption" value="Demo Picture"
+           placeholder="No caption">
+         </div>
+         <!-- Media Featured Status -->
+         <div class="mediaFeatured">
+          <div class="form-check">
+           <input class="form-check-input" type="checkbox" id="feature-4" name="feature">
+           <label class="form-check-label" for="feature-4">Featured Media?</label>
+          </div>
          </div>
         </div>
-       </div>
 
 
-       <!-- Media Categories -->
-       <div class="mediaCategories">
-        <div class="form-check">
-         <input class="form-check-input" type="checkbox" id="4-1" name="category[]" value="1" checked>
-         <label class="form-check-label" for="4-1">Everything</label>
+        <!-- Media Categories -->
+        <div class="mediaCategories">
+         <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="4-1" name="category[]" value="1" checked>
+          <label class="form-check-label" for="4-1">Everything</label>
+         </div>
+         <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="4-1" name="category[]" value="1" checked>
+          <label class="form-check-label" for="4-1">Holiday</label>
+         </div>
+         <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="4-1" name="category[]" value="1" checked>
+          <label class="form-check-label" for="4-1">Travel</label>
+         </div>
+
         </div>
-        <div class="form-check">
-         <input class="form-check-input" type="checkbox" id="4-1" name="category[]" value="1" checked>
-         <label class="form-check-label" for="4-1">Holiday</label>
+
+        <!-- Media Control Buttons -->
+        <div class="mediaControls">
+         <a class="btn btn-sm btn-cancel" href="/admin/media/">Cancel</a>
+         <button class="btn btn-sm btn-delete" type="submit" formaction="/admin/media/delete"
+          value="delete">Delete</button>
+
+         <button class="btn btn-sm btn-save" type="submit" value="save">Save</button>
+
         </div>
-        <div class="form-check">
-         <input class="form-check-input" type="checkbox" id="4-1" name="category[]" value="1" checked>
-         <label class="form-check-label" for="4-1">Travel</label>
-        </div>
 
-       </div>
+       </form>
+      </div>
 
-       <!-- Media Control Buttons -->
-       <div class="mediaControls">
-        <a class="btn btn-sm btn-cancel" href="/admin/media/">Cancel</a>
-        <button class="btn btn-sm btn-delete" type="submit" formaction="/admin/media/delete"
-        value="delete">Delete</button>
 
-        <button class="btn btn-sm btn-save" type="submit" value="save">Save</button>
-    
-       </div>
-
-      </form>
-     </div>
-
-    
       <div class="media jsMediaCard">
        <form class="mediaForm" action="/admin/media/save" method="post" accept-charset="utf-8">
         <input type="hidden" name="pitonCsrfToken"
@@ -159,27 +164,29 @@
         <input type="hidden" name="media_id" value="3">
 
         <div class="mediaPopup">
-         <img src="https://unsplash.it/480/640" class="mediaImageThumb" alt="Demo Picture" data-caption="Demo Picture" data-media-id="3">
+         <img src="https://unsplash.it/480/640" class="mediaImageThumb" alt="Demo Picture" data-caption="Demo Picture"
+          data-media-id="3">
 
          <span class="mediaPopupImg">
-          <img src="https://unsplash.it/480/640" class="mediaImageThumbPopup" alt="Demo Picture" data-caption="Demo Picture" data-media-id="3">
+          <img src="https://unsplash.it/480/640" class="mediaImageThumbPopup" alt="Demo Picture"
+           data-caption="Demo Picture" data-media-id="3">
          </span>
         </div>
 
-          <div class="mediaBlock">
-        <!-- Media Caption Input -->
-        <div class="mediaCaption">
-         <input type="text" class="form-control form-control-sm" name="caption" value="Demo Picture"
-          placeholder="No caption">
-        </div>
-        <!-- Media Featured Status -->
-        <div class="mediaFeatured">
-         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="feature-4" name="feature">
-          <label class="form-check-label" for="feature-4">Featured Media?</label>
+        <div class="mediaBlock">
+         <!-- Media Caption Input -->
+         <div class="mediaCaption">
+          <input type="text" class="form-control form-control-sm" name="caption" value="Demo Picture"
+           placeholder="No caption">
+         </div>
+         <!-- Media Featured Status -->
+         <div class="mediaFeatured">
+          <div class="form-check">
+           <input class="form-check-input" type="checkbox" id="feature-4" name="feature">
+           <label class="form-check-label" for="feature-4">Featured Media?</label>
+          </div>
          </div>
         </div>
-       </div>
 
         <div class="mediaCategories">
          <div class="form-group form-check form-check-inline">
@@ -189,15 +196,15 @@
 
         </div>
 
-          <!-- Media Control Buttons -->
-          <div class="mediaControls">
-           <a class="btn btn-sm btn-cancel" href="/admin/media/">Cancel</a>
-           <button class="btn btn-sm btn-delete" type="submit" formaction="/admin/media/delete"
-           value="delete">Delete</button>
-           <button class="btn btn-sm btn-save" type="submit" value="save">Save</button>
-        
-   
-          </div>
+        <!-- Media Control Buttons -->
+        <div class="mediaControls">
+         <a class="btn btn-sm btn-cancel" href="/admin/media/">Cancel</a>
+         <button class="btn btn-sm btn-delete" type="submit" formaction="/admin/media/delete"
+          value="delete">Delete</button>
+         <button class="btn btn-sm btn-save" type="submit" value="save">Save</button>
+
+
+        </div>
        </form>
       </div>
 
@@ -208,10 +215,12 @@
         <input type="hidden" name="media_id" value="2">
 
         <div class="mediaPopup">
-         <img src="https://unsplash.it/640/482" class="mediaImageThumb" alt="Demo Picture" data-caption="Demo Picture" data-media-id="3">
+         <img src="https://unsplash.it/640/482" class="mediaImageThumb" alt="Demo Picture" data-caption="Demo Picture"
+          data-media-id="3">
 
          <span class="mediaPopupImg">
-          <img src="https://unsplash.it/640/482" class="mediaImageThumbPopup" alt="Demo Picture" data-caption="Demo Picture" data-media-id="3">
+          <img src="https://unsplash.it/640/482" class="mediaImageThumbPopup" alt="Demo Picture"
+           data-caption="Demo Picture" data-media-id="3">
          </span>
         </div>
 
@@ -239,15 +248,15 @@
 
         </div>
 
-     <!-- Media Control Buttons -->
-     <div class="mediaControls">
-      <a class="btn btn-sm btn-cancel" href="/admin/media/">Cancel</a>
-      <button class="btn btn-sm btn-delete" type="submit" formaction="/admin/media/delete"
-      value="delete">Delete</button>
-      <button class="btn btn-sm btn-save" type="submit" value="save">Save</button>
- 
+        <!-- Media Control Buttons -->
+        <div class="mediaControls">
+         <a class="btn btn-sm btn-cancel" href="/admin/media/">Cancel</a>
+         <button class="btn btn-sm btn-delete" type="submit" formaction="/admin/media/delete"
+          value="delete">Delete</button>
+         <button class="btn btn-sm btn-save" type="submit" value="save">Save</button>
 
-     </div>
+
+        </div>
        </form>
       </div>
 
@@ -258,10 +267,12 @@
         <input type="hidden" name="media_id" value="1">
 
         <div class="mediaPopup">
-         <img src="https://unsplash.it/640/483" class="mediaImageThumb" alt="Demo Picture" data-caption="Demo Picture" data-media-id="3">
+         <img src="https://unsplash.it/640/483" class="mediaImageThumb" alt="Demo Picture" data-caption="Demo Picture"
+          data-media-id="3">
 
          <span class="mediaPopupImg">
-          <img src="https://unsplash.it/640/483" class="mediaImageThumbPopup" alt="Demo Picture" data-caption="Demo Picture" data-media-id="3">
+          <img src="https://unsplash.it/640/483" class="mediaImageThumbPopup" alt="Demo Picture"
+           data-caption="Demo Picture" data-media-id="3">
          </span>
         </div>
 
@@ -288,22 +299,23 @@
          </div>
         </div>
 
-         <!-- Media Control Buttons -->
-         <div class="mediaControls">
-          <a class="btn btn-sm btn-cancel" href="/admin/media/">Cancel</a>
-          <button class="btn btn-sm btn-delete" type="submit" formaction="/admin/media/delete"
+        <!-- Media Control Buttons -->
+        <div class="mediaControls">
+         <a class="btn btn-sm btn-cancel" href="/admin/media/">Cancel</a>
+         <button class="btn btn-sm btn-delete" type="submit" formaction="/admin/media/delete"
           value="delete">Delete</button>
-          <button class="btn btn-sm btn-save" type="submit" value="save">Save</button>
-     
-  
-         </div>
+         <button class="btn btn-sm btn-save" type="submit" value="save">Save</button>
+
+
+        </div>
 
        </form>
-      </div> 
+      </div>
 
+     </div>
+
+     <!-- End Content -->
     </div>
-
-    <!-- End Content -->
    </div>
   </main>
 

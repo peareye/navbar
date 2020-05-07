@@ -17,6 +17,7 @@ $nav-font-color: $light-orange;
 $link-hover-color: $dark-orange;
 
 $border-radius: 7px;
+$container-max: 1000px;
 $box-shadow: 0 2px 2px rgba($black, .5);
 $box-shadow-1: 0px 0px 0px 1px rgba(63, 63, 68, .05), 0 1px 3px 0px rgba(63, 63, 68, .15);
 $box-shadow-2: 0px 0px 0px 1px rgba(63, 63, 68, .05), 0px 1px 3px 0px rgba(63, 63, 68, .15);
@@ -47,3 +48,10 @@ $bg-blue: $blue-light;
 $badge-notify: $dark-green;
 $badge-warning: $dark-orange;
 $clr-border: $blue-light;
+$btn-blue: hsl(210, 50%, 40%);
+$btn-blue-hover: darken($btn-blue, 10%);
+$btn-blue-disabled: lighten($btn-blue, 20%);
+$btn-red: rgb(221, 44, 44);
+$btn-red-hover: darken($btn-red, 10%);
+$btn-green: rgb(20, 112, 20);
+$btn-green-hover: darken($btn-green, 10%);
