@@ -6,20 +6,20 @@ $dark-grey: hsl(0, 0%, 25%);
 $dark-green: hsl(89, 52%, 24%);
 $dark-orange: hsl(25, 84%, 51%);
 $light-orange: hsl(36, 100%, 71%);
-$blue-light: rgba(92, 106, 196, 0.12);
+$blue-light: rgba(90, 104, 196, .15);
 
 
 // Navigation Variables
 $breakpoint: 768px;
-$nav-height: 55px;
-$nav-width: 250px;
+$nav-height: 50px;
+$nav-width: 200px;
 $nav-font-color: $light-orange;
 $link-hover-color: $dark-orange;
 
-$box-shadow: 0 2px 2px rgba($black, .5);
-$box-shadow-1: 0 0 0 1px rgba(63, 63, 68, .05),
-0 1px 3px 0 rgba(63, 63, 68, .15);
 $border-radius: 7px;
+$box-shadow: 0 2px 2px rgba($black, .5);
+$box-shadow-1: 0px 0px 0px 1px rgba(63, 63, 68, .05), 0 1px 3px 0px rgba(63, 63, 68, .15);
+$box-shadow-2: 0px 0px 0px 1px rgba(63, 63, 68, .05), 0px 1px 3px 0px rgba(63, 63, 68, .15);
 
 // Text Colors
 

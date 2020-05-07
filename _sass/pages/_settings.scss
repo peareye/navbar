@@ -1,0 +1,30 @@
+.content-block {
+ @include margin(1rem);
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+ gap: 2rem;
+
+ .form-group {
+  @include padding(1rem);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: $box-shadow-1;
+
+  &__title-wrapper {
+   display: flex;
+   width: 100%;
+   justify-content: flex-start;
+
+   label {
+    flex: 1;
+   }
+
+   .badge {
+    flex: 0;
+    padding: 0.125em 0.25em;
+   }
+  }
+ }
+}

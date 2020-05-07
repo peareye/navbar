@@ -1,4 +1,4 @@
-/* Top Header Area Style */
+/* Layout */
 /* Header, Logo, Hamburger Toggle */
 .top-header {
  @include padding(null 1em);
@@ -7,13 +7,11 @@
  color: $nav-font-color;
 
  position: fixed;
+ left: 0;
+ right: 0;
  width: 100%;
  z-index: 120;
  box-shadow: $box-shadow;
-
- @media screen and (min-width: $breakpoint) {
-  // Media Query Here
- }
 
  .logo {
   font-size: 2rem;
@@ -41,8 +39,6 @@
   }
  }
 }
-
-/* Layout */
 .wrapper {
  min-height: 100%;
  @include padding(#{$nav-height} null null null);
@@ -53,11 +49,111 @@
  @media screen and (min-width: $breakpoint) {
   @include padding(#{$nav-height} null null #{$nav-width});
  }
+ .sidebar{
+  min-width: $nav-width;
+  height: calc(100vh - #{$nav-height});
+  flex-grow: 1;
+  background: $bg-accent;
+  font-size: .875rem;
+  font-weight: 500;
+  border-right: solid $bg-blue 1px;
+ 
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: $nav-height;
+  z-index: 119;
+ 
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform 250ms ease-in-out;
+ 
+  @media screen and (min-width: $breakpoint) {
+   transform: scale(1, 1);
+   display: block;
+   position: fixed;
+   height: calc(100vh - #{$nav-height});
+  }
+ }
+ .main-content {
+  flex-basis: 0;
+  flex-grow: 999;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  position: relative;
+ }
+ // Content Header Styles
+ .content-header {
+  background: $bg-accent;
+  min-height: $nav-height;
+  width: 100%;
+ 
+  box-shadow: $box-shadow-1;
+  @include padding(null 1em);
+ 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+ 
+  position: fixed;
+  z-index: 100;
+  top: $nav-height;
+ 
+  @media screen and (min-width: $breakpoint) {
+   width: calc(100vw - #{$nav-width});
+  }
+  .breadcrumb {
+   font-weight: 300;
+   font-size: 0.75rem;
+ 
+   a {
+    color: $nav-font-color;
+ 
+    &:hover {
+     color: $link-hover-color;
+    }
+   }
+  }
+  // Section Title
+  .section-title {
+   @include margin(0);
+   @include padding(0 0 0 1em);
+   font-weight: 900;
+   font-size: 2rem;
+   flex: 3;
+  }
+  // Content Header Control Buttons
+  .btn-group {
+  
+   display: flex;
+   justify-content: flex-end;
+   flex: 1;
+ 
+   align-items: center;
+   justify-self: flex-end;
+ 
+   *+* {
+    @include margin(null null null 1em);
+   }
+  }
+ }
+ // Content Section Layout
+ .content{
+  @include padding(calc(#{$nav-height} + 1em) 1em 1em 1em);
+ }
 }
 
-.content {
- @include padding(1em);
- flex-basis: 0;
- flex-grow: 999;
- min-height: 150vh;
+.filter-block {
+ @include margin(null null 1em null);
+ display: grid;
+ grid-template-columns: 50vw 1fr 1fr;
+ gap: 1em;
+ align-items: center
+ 
 }
+.btn-dropdown-block {
+ position: relative;
+}
+
+

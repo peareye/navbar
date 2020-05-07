@@ -1,0 +1,55 @@
+/* Page Content Styles */
+
+.page-list-item,
+.page-list-item-header {
+ display: grid;
+ grid-template-columns: 80px 200px 150px 1fr;
+ gap: 2vw;
+ justify-content: center;
+ align-items: center;
+ height: 80px;
+ border-top: solid 1px $clr-border;
+
+ &:hover {
+  background: $bg-blue;
+ }
+
+ &__heading {
+  font-size: 1.1rem;
+ }
+
+ &:last-child {
+  border-bottom: solid 1px $clr-border;
+ }
+
+ &__media {
+  object-fit: cover;
+  @include padding(0.5em);
+ }
+
+ // &__title {
+ //  font-weight: 700;
+ // }
+}
+
+
+
+.add-user {
+ justify-self: flex-start;
+ align-self: flex-start;
+}
+
+
+
+
+.pageEdit-content-block {
+ margin-bottom: 2rem;
+}
+.page-list-item-header {
+ height: 40px;
+ @include margin(1em null null null);
+
+ &:hover {
+  background: $bg-light;
+ }
+}

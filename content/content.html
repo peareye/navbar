@@ -23,68 +23,83 @@
     <li class="side-nav__link home "><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
     <li class="side-nav__link pageContent active"><i class="fas fa-pencil-alt"> </i><a href="/content/content.html">
       Pages</a></li>
-    <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media.html"> Media</a></li>
+    <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media/media.html"> Media</a></li>
     <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html">Messages</a>
      <div class="badge badge-notify">4</div>
     </li>
-    <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help.html"> Help</a></li>
+    <li class="side-nav__link help"><i class="fas fa-question"></i><a href="/help/help.html"> Help</a></li>
     <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html">Settings</a></li>
    </ul>
   </aside>
 
   <main role="main" class="main-content">
+
    <header class="content-header">
-    <div class="breadcrumb">&nbsp;</div>
+    <div class="breadcrumb"></div>
     <h3 class="section-title">All Pages</h3>
-    <div class="btn-group">
-     <a href="#" class="btn add-btn">Add Page</a>
-    </div>
+    
+     <div class="btn-dropdown-block">
+      <button class="btn btn-add"><span>Add&nbsp;&nbsp;&nbsp;</span> <span><i class="fas fa-chevron-down"></i></span> </button>
+      <div class="form-group-block">
+       <div class="form-group">
+        <input type="radio" id="without-hero" name="template" value="without-hero">
+        <label for="without-hero">Without Hero</label>
+       </div>
+       <div class="form-group">
+        <input type="radio" id="with-hero" name="template" value="with-hero">
+        <label for="with-hero">With Hero</label>
+       </div>
+      </div>
+     </div>
    </header>
+   
    <div class="content">
-    <div class="page-list-item-filter">
-     <form>
-      <div class="form-inner">
-       <input class="page-search-input" type="text" name="searchPage" id="searchPage" placeholder="Search Pages">
-       <div class="dropdown">
-        <button class="btn btn-dropdown">Filter by Status&nbsp;&nbsp;<i class="fas fa-chevron-down"></i></button>
-        <div class="dropdown-content">
 
-         <input type="radio" id="published" name="gender" value="published">
-         <label for="published">Published</label>
-         <input type="radio" id="Pending" name="gender" value="Pending">
-         <label for="Pending">Pending</label>
-         <input type="radio" id="draft" name="gender" value="draft">
-         <label for="draft">Draft</label>
+     <form class="filter-block">
+    
+       <div class="search-block">
+        <div class="search-icon">
+         <i class="fas fa-search"></i>
         </div>
-       </div>
-       <div class="dropdown">
-        <button class="btn btn-dropdown">Filter by Template&nbsp;&nbsp;<i class="fas fa-chevron-down"></i></button>
-        <div class="dropdown-content">
-         <p class="dropdown-title span">Pages</p>
-         <input type="radio" id="withHero" name="gender" value="withHero">
-         <label for="withHero">With Hero</label>
-         <input type="radio" id="withoutHero" name="gender" value="withoutHero">
-         <label for="withoutHero">Without Hero</label>
-         <hr class="dropdown-divider span">
-         <p class="dropdown-title span">Collections</p>
-         <input type="radio" id="holidayRecipe" name="gender" value="holidayRecipe">
-         <label for="holidayRecipe">Holiday Recipes</label>
-         <input type="radio" id="ketoRecipe" name="gender" value="ketoRecipe">
-         <label for="ketoRecipe">Keto Recipes</label>
-         <input type="radio" id="services" name="gender" value="services">
-         <label for="services">Blog Post</label>
+        <div class="search-input">
+         <input type="search" name="search" id="search" class="search" placeholder="Search" autocomplete="false">
         </div>
        </div>
 
-      </div>
+       <div class="btn-dropdown-block">
+        <button class="btn btn-dropdown btn-sm"><span>By Status</span> <span><i class="fas fa-chevron-down"></i></span> </button>
+        <div class="form-group-block">
+         <div class="form-group">
+          <input type="radio" id="pending" name="status" value="pending">
+          <label for="pending">Pending</label>
+         </div>
+         <div class="form-group">
+          <input type="radio" id="published" name="status" value="published">
+          <label for="published">Published</label>
+         </div>
+         <div class="form-group">
+          <input type="radio" id="draft" name="status" value="draft">
+          <label for="draft">Draft</label>
+         </div>
+        </div>
+       </div>
 
-      <div class="page-list-item-search">
+       <div class="btn-dropdown-block">
+        <button class="btn btn-dropdown btn-sm"><span>By Template</span> <span><i class="fas fa-chevron-down"></i></span> </button>
+        <div class="form-group-block">
+         <div class="form-group">
+          <input type="radio" id="without-hero" name="template" value="without-hero">
+          <label for="without-hero">Without Hero</label>
+         </div>
+         <div class="form-group">
+          <input type="radio" id="with-hero" name="template" value="with-hero">
+          <label for="with-hero">With Hero</label>
+         </div>
+        </div>
+       </div>
 
-      </div>
-      <div class="page-list-item__heading"></div>
-      <div class="page-list-item__heading"></div>
      </form>
-    </div>
+   
 
     <div class="page-list-item-header">
      <div class="page-list-item__heading"></div>
@@ -94,7 +109,7 @@
     </div>
 
     <!-- Page List Item -->
-    <a class="page-list-item" href="#">
+    <a class="page-list-item" href="editPage1.html">
      <div class="page-list-item__media"><img src="https://unsplash.it/100/101" alt=""></div>
      <div class="page-list-item__title" title="Hero">Hero</div>
      <div class="page-list-item__status draft">Draft</div>

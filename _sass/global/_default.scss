@@ -31,6 +31,7 @@ h4,
 h5,
 h6 {
  color: $clr-h;
+ line-height: 1;
 }
 
 a {
@@ -89,4 +90,7 @@ a {
 .pending {
  color: gold;
  text-transform: capitalize;
+}
+.d-none{
+ display: none;
 }

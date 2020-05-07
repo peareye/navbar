@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>SideNav Layout</title>
+ <script src="https://kit.fontawesome.com/9065d19188.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+ <header class="top-header">
+  <div class="logo">
+   <a href="/index.html">Piton<span>CMS</span></a></div>
+ </header>
+
+ <div class="wrapper">
+  <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+  <aside class="sidebar">
+   <ul class="side-nav">
+    <li class="side-nav__link home "><i class="fas fa-home"></i> <a href="/index.html"> Home</a></li>
+    <li class="side-nav__link pageContent"><i class="fas fa-pencil-alt"> </i><a href="/content/content.html"> Pages</a>
+    </li>
+    <li class="side-nav__link media"><i class="fas fa-images"> </i><a href="/media/media.html"> Media</a></li>
+    <li class="side-nav__link messages"><i class="fas fa-envelope"></i><a href="/messages.html"> Messages</a>
+     <div class="badge badge-notify">4</div>
+    </li>
+    <li class="side-nav__link help active"><i class="fas fa-question"></i><a href="/help/help.html"> Help</a></li>
+    <li class="side-nav__link settings"><i class="fas fa-cog"> </i><a href="/settings/settings.html"> Settings</a></li>
+   </ul>
+  </aside>
+
+  <main role="main" class="main-content">
+   <header class="content-header">
+    <div class="breadcrumb"><a href="help.html"><i class="fas fa-chevron-left"></i> Support</a></div>
+    <h3 class="section-title">PitonCMS Overview</h3>
+    <div class="btn-group">
+     
+    </div>
+   </header>
+   <div class="content">
+    <h1 id="pitoncms-overview">PitonCMS Overview</h1>
+    <p>PitonCMS is an easy to use, powerful Content Management System for personal and business websites.</p>
+    <h2 id="login">Login</h2>
+    <p>PitonCMS does not store confidential passwords. When your website was setup by your designer, your email address
+     was added as a registered user. To login, simply go to your website and add "<a href="/login">/login</a>" to the
+     URL.</p>
+    <p>Enter your email address and click <strong>Request Login</strong>. A login link will be sent to you with a
+     one-time use login token that takes you to PitonCMS administration pages. The link expires in 5 minutes, and cannot
+     be reused.</p>
+    <h2 id="quick-start">Quick Start</h2>
+    <p>If you are new to your custom website, here are a few things to review:</p>
+    <h3 id="tools-menu">Tools Menu</h3>
+    <ul>
+     <li><strong>General</strong> Browse the site wide settings and confirm the values are correct. These can be changed
+      at anytime.
+      <ul>
+       <li>Under <strong>General</strong>, consider adding a <a href="https://tinyjpg.com/">Tinify</a> key to optimize
+        uploaded media.</li>
+      </ul>
+     </li>
+     <li><strong>Contact</strong> If you have a contact form on your website enter your email address to receive website
+      contact messages directly to you, and set the acknowledgement message after the contact form is submitted.</li>
+     <li><strong>Social</strong> Add links to your social media sites.</li>
+     <li><strong>Users</strong> Consider adding another user account, or a back up administrator email address.</li>
+    </ul>
+    <p>And of course, browse the help documents.</p>
+    <h2 id="key-concepts">Key Concepts</h2>
+    <p>When your web designer planned your website with PitonCMS, they defined the general structure and layout of
+     pages, the navigation bars, and overall appearance of your website. You can easily manage the content within this
+     structure from the Administration pages.</p>
+    <h3 id="content-menu">Content Menu</h3>
+    <p>Most of the website content and navigation can be managed from the <strong>Content</strong> menu.</p>
+    <h4 id="pages">Pages</h4>
+    <p>Pages have content accessible at a specific URL. Typically these hold <em>static</em> content such as Home,
+     About, Location, and Collection Summary etc. and are part of the main website navigation.</p>
+    <p>Pages and Collection Detail Pages are structured by <strong>Templates</strong> around designer defined page
+     <strong>Blocks</strong> that represent broad areas of a page design, to which you can add one or more
+     <strong>Elements</strong> that contain your page content and media.</p>
+    <p>There may also be designer defined <strong>Custom Page Settings</strong> in the page template, that store
+     specific bits of information for the page.</p>
+    <p>You can pre-publish pages by setting the publish date to a future date.</p>
+    <h4 id="collection-pages">Collection Pages</h4>
+    <p>Collections are groups of <em>related</em> pages such as blog posts, recipes, services etc. and consist of
+     <strong>Collection Detail Pages</strong>, and <strong>Collection Summaries</strong> which is a group of links to
+     the detail page.</p>
+    <p>You can have multiple collections on your website, such as separate collection groups for different recipe
+     categories.</p>
+    <h4 id="navigation">Navigation</h4>
+    <p>You can define how static page links appear in your site's navigation, including the order of links, link text,
+     and sub-menu links. Only <em>Pages</em> appear in navigation links, Collection Detail Pages are linked from a
+     Collection Summary static page.</p>
+    <h3 id="media">Media</h3>
+    <p>Before you can display images and other media in your pages or collection detail pages, you need to upload the
+     media file from the <strong>Media</strong> menu. You can upload any media image or PDF file type, but video and
+     other large graphics should be hosted on a video streaming platform such as <a
+      href="https://youtube.com">YouTube</a>. You can then embed the video player HTML into your PitonCMS page.</p>
+    <p>PitonCMS recommends getting a <a href="https://tinyjpg.com/">Tinify</a> key to optimize media files. You can get
+     a free key that supports 500 media operations a month (about 100 PitonCMS image uploads). Go to <a
+      href="https://tinyjpg.com/developers">Tiny Developer API</a> and enter your email address to receive a key that
+     you save in <strong>Tools &gt; General</strong> site settings.</p>
+    <h3 id="messages">Messages</h3>
+    <p>If you have a contact form enabled, your contact messages are saved under the <strong>Messages</strong> menu.</p>
+    <h3 id="tools">Tools</h3>
+    <p>PitonCMS has a collection of website management tools under the <strong>Tools</strong> menu, including:</p>
+    <ul>
+     <li>General Site Settings</li>
+     <li>Contact Form Settings</li>
+     <li>Soial Media Links</li>
+     <li>Website Administrative Users</li>
+     <li>Sitemap to help Search Engine Optimization</li>
+    </ul>
+    <h2 id="issues">Issues</h2>
+    <p>If you encounter issues with PitonCMS, please submit them on <a
+      href="https://github.com/PitonCMS/Piton/issues">GitHub PitonCMS</a>.</p>
+
+   </div>
+
+  </main>
+ </div>
+
+</body>
+
+</html>

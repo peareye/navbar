@@ -1,0 +1,35 @@
+.content-cards {
+ @include margin(2rem null);
+ width: 80%;
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+ gap: 2em;
+}
+
+.content-card {
+ @include padding(0.5em);
+ border-radius: $border-radius;
+ display: grid;
+ grid-template-columns: auto 1fr;
+ gap: 0.25em 0.5em;
+ align-items: center;
+
+ &:hover {
+  background: $bg-accent;
+ }
+
+ p {
+  grid-column: 2 / -1;
+  font-size: 0.75rem;
+  color: rgba($clr-text, 0.75);
+ }
+
+ .card-icon {
+  font-size: 1.3rem;
+  color: rgba($clr-text, 0.5);
+ }
+
+ .title-text {
+  margin: 0;
+ }
+}

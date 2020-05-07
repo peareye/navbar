@@ -1,28 +1,4 @@
 .sidebar {
- min-width: $nav-width;
- height: calc(100vh - #{$nav-height});
- flex-grow: 1;
- background: $bg-accent;
- font-size: .875rem;
- font-weight: 500;
-
- position: absolute;
- left: 0;
- bottom: 0;
- top: $nav-height;
- z-index: 119;
-
- transform: scale(0, 1);
- transform-origin: left;
- transition: transform 250ms ease-in-out;
-
- @media screen and (min-width: $breakpoint) {
-  transform: scale(1, 1);
-  display: block;
-  position: fixed;
-  height: calc(100vh - #{$nav-height});
- }
-
  .side-nav {
   height: 100%;
   display: flex;
@@ -38,8 +14,7 @@
    column-gap: .25em;
 
    &:hover {
-    background-color: $bg-blue;
-  
+    background-color: rgba($bg-blue, .12);
    }
 
    a {
@@ -53,7 +28,6 @@
     }
 
     &:hover {
-     // background: $bg-blue;
      color: $clr-accent;
     }
    }
@@ -61,33 +35,21 @@
 
   .active {
    background-color: rgba($bg-blue, .5);
- 
-   &:hover{
+
+   &:hover {
     cursor: default;
-    a{
+
+    a {
      color: $clr-text;
     }
    }
   }
-
  }
-
- .settings {
-  @include margin(auto null 1rem null);
- }
-
  .fas {
   color: rgba($clr-text, .35);
   @include margin(null 1rem null .25em);
   font-size: 1rem;
  }
-
- .sub-nav {
-  grid-column: 2 / -1;
-  list-style: none;
-  @include margin(null null null 1em);
- }
-
 }
 
 .nav-toggle:checked~.sidebar {
