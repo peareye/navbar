@@ -140,7 +140,10 @@
  }
  // Content Section Layout
  .content{
+  width: 100%;
+  max-width: 1000px;
   @include padding(calc(#{$nav-height} + 1em) 1em 1em 1em);
+  @include margin(0 auto);
  }
 }
 

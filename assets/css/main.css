@@ -741,7 +741,10 @@ a:hover {
 }
 
 .wrapper .content {
+  width: 100%;
+  max-width: 1000px;
   padding: calc(50px + 1em) 1em 1em;
+  margin: 0 auto;
 }
 
 .filter-block {
