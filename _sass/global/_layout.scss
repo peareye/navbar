@@ -94,11 +94,16 @@
 
  // Content Header Styles
  .content-header {
+  @include padding(0 1em);
   background: $bg-accent;
   min-height: $nav-height;
   width: 100%;
   box-shadow: $box-shadow-1;
-  @include padding(1em);
+
+  display: flex;
+  align-items: center;
+
+  
   position: fixed;
   z-index: 100;
   top: $nav-height;
@@ -135,10 +140,6 @@
  }
 
  }
-
-
-
-
 
  // Content Header Control Buttons
  .btn-group {

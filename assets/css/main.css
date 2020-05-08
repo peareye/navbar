@@ -682,12 +682,18 @@ a:hover {
 }
 
 .wrapper .content-header {
+  padding: 0 1em;
   background: #f3f5f7;
   min-height: 50px;
   width: 100%;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0px rgba(63, 63, 68, 0.15);
           box-shadow: 0px 0px 0px 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0px rgba(63, 63, 68, 0.15);
-  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   z-index: 100;
   top: 50px;
@@ -917,10 +923,12 @@ button:disabled,
 }
 
 .btn {
+  padding: 1em;
   width: 100%;
   background: darkmagenta;
   color: white;
   border-radius: 7px;
+  text-align: center;
 }
 
 .btn:hover {
@@ -934,7 +942,6 @@ button:disabled,
 }
 
 .btn-dropdown {
-  padding: 1em;
   background: rgba(90, 104, 196, 0.15);
   color: #404040;
   display: -webkit-box;
@@ -949,9 +956,20 @@ button:disabled,
   border-radius: 0;
 }
 
+.btn-dropdown:hover {
+  cursor: default;
+  background: rgba(90, 104, 196, 0.15) !important;
+}
+
 .btn-add {
+  border-radius: 0;
   background: #eb7119;
   color: white;
+}
+
+.btn-add:hover {
+  background: #eb7119;
+  cursor: default;
 }
 
 .btn-publish {
@@ -978,6 +996,19 @@ button:disabled,
 .btn-save-disabled:hover {
   background: #6699cc !important;
   cursor: not-allowed;
+}
+
+.btn-new {
+  background: greenyellow !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btn-delete {
@@ -1102,10 +1133,10 @@ input[type="textarea"],
   min-width: 0;
   min-height: 3.6rem;
   margin: 0;
-  padding: .5rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   padding-left: 1.2rem;
   background: #f3f5f7;
-  border: .1rem solid transparent;
+  border: 0.1rem solid transparent;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -1152,19 +1183,32 @@ input[type="textarea"],
   border-top-left-radius: 7px;
 }
 
-.form-group-block {
+.form-group-block,
+.form-group-block-add {
+  width: 100%;
+  background: #f3f5f7;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(63, 63, 68, 0.05), 0px 1px 3px 0px rgba(63, 63, 68, 0.15);
+          box-shadow: 0px 0px 0px 1px rgba(63, 63, 68, 0.05), 0px 1px 3px 0px rgba(63, 63, 68, 0.15);
   -webkit-transform-origin: top;
           transform-origin: top;
   -webkit-transform: scale(1, 0);
           transform: scale(1, 0);
-  -webkit-transition: -webkit-transform 250ms ease;
-  transition: -webkit-transform 250ms ease;
-  transition: transform 250ms ease;
-  transition: transform 250ms ease, -webkit-transform 250ms ease;
-  background: #f3f5f7;
+  -webkit-transition: -webkit-transform 250ms ease-in-out 200ms;
+  transition: -webkit-transform 250ms ease-in-out 200ms;
+  transition: transform 250ms ease-in-out 200ms;
+  transition: transform 250ms ease-in-out 200ms, -webkit-transform 250ms ease-in-out 200ms;
+  z-index: 100;
+  position: absolute;
+  top: 100%;
+  right: 0;
 }
 
-.btn-dropdown-block:hover > .form-group-block {
+.form-group-block-add {
+  width: 160px;
+}
+
+.btn-dropdown-block:hover > .form-group-block,
+.btn-dropdown-block:hover > .form-group-block-add {
   cursor: pointer;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1183,24 +1227,6 @@ input[type="textarea"],
 .form-group label:hover,
 .form-group:hover {
   cursor: pointer;
-}
-
-.form-group-block {
-  background: #f3f5f7;
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(63, 63, 68, 0.05), 0px 1px 3px 0px rgba(63, 63, 68, 0.15);
-          box-shadow: 0px 0px 0px 1px rgba(63, 63, 68, 0.05), 0px 1px 3px 0px rgba(63, 63, 68, 0.15);
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-transform: scale(1, 0);
-          transform: scale(1, 0);
-  -webkit-transition: -webkit-transform 250ms ease-in-out 200ms;
-  transition: -webkit-transform 250ms ease-in-out 200ms;
-  transition: transform 250ms ease-in-out 200ms;
-  transition: transform 250ms ease-in-out 200ms, -webkit-transform 250ms ease-in-out 200ms;
-  z-index: 100;
 }
 
 .btn-dropdown-block:hover > .form-group-block {
@@ -1226,7 +1252,7 @@ label {
 .form-group label {
   width: 100%;
   height: 100%;
-  font-size: .875rem;
+  font-size: 0.875rem;
 }
 
 .form-group:hover {
@@ -1507,6 +1533,12 @@ input:focus {
 .social-block * + *,
 .sitemap-block * + * {
   margin-top: 1em;
+}
+
+.add-user {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 /* Page Content Styles */

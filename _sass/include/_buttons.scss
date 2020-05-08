@@ -39,10 +39,12 @@ button,
 
 // Default buttons
 .btn {
+ @include padding(1em);
  width: 100%;
  background: darkmagenta;
  color: $txt-light;
  border-radius: $border-radius;
+ text-align: center;
 
  &:hover {
   background: hue($clr-accent);
@@ -56,18 +58,26 @@ button,
 }
 
 .btn-dropdown {
- @include padding(1em);
  background: $bg-blue;
  color: $txt-dark;
  display: flex;
  justify-content: space-between;
  align-items: center;
  border-radius: 0;
+ &:hover{
+  cursor: default;
+  background: $bg-blue !important;
+ }
 }
 
 .btn-add {
+ border-radius: 0;
  background: $clr-accent;
  color: $txt-light;
+ &:hover{
+  background: $clr-accent;
+  cursor: default;
+ }
 }
 
 .btn-publish {
@@ -93,6 +103,12 @@ button,
    cursor: not-allowed;
   }
  }
+}
+.btn-new {
+ background: greenyellow !important;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 
 .btn-delete {
